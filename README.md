@@ -138,39 +138,11 @@ Created by **Elmar Chavez**
 
 <!--
 
-DATES:
-
-September 2025 = **6<sup>th</sup>**
-October 2025 = **7<sup>th</sup>**
-November 2025 = **8<sup>th</sup>**
-December 2025 = **9<sup>th</sup>**
-
-FRONTEND MENTOR TAGS:
-html css javascript vscode git github netlify 5th-month frontend-mentor project perfectpixel lighthouse theme-toggle
-
-FREECODECAMP TAGS:
-html css javascript vscode git github netlify 5th-month freecodecamp project lighthouse theme-toggle fcc-js api
-
 WES BOS JAVASCRIPT30 TAGS:
 html css javascript vscode git github netlify 6th-month wes-bos javascript30 project lighthouse theme-toggle figma
 
 MERGE PULL REQUEST COMMENT SIMULATING PR APPROVAL FROM A TEAM:
 In a team setting, this PR would await senior developer approval.
 For this solo project, I’ll proceed with merging after review.
-
-PULL REQUEST TEMPLATE FOR INITIAL PR MERGE (BOILERPLATE MERGE):
-## Description
-
-Adds the boilerplate structure to start development.
-No user-facing features included.
-
-## Changes
-
-- README.md
-- Base folder structure
-- Starter HTML/CSS/JS
-- PR template under `.github/`
-- MIT LICENSE
-- Favicons
 
 -->
