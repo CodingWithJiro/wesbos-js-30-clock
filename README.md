@@ -42,16 +42,6 @@
 
 INSERT A BRIEF DESCRIPTION OF THE PROJECT
 
-<!-- FOR FRONTEND MENTOR PROJECTS ONLY -->
-
-Created as part of the building challenges from [Frontend Mentor](https://www.frontendmentor.io/).
-
-<!-- FOR FREECODECAMP LAB PROJECTS ONLY -->
-
-Created as part of the lab challenges from [**freeCodeCamp.org**](https://www.freecodecamp.org/learn/full-stack-developer/) JavaScript course.
-
-<!-- FOR WES BOS JAVASCRIPT30 PROJECTS -->
-
 This project is inspired from Wes Bos' free [#JavaScript30 Course](https://javascript30.com/)
 
 ---
