@@ -20,8 +20,8 @@
 [![Google Lighthouse](https://img.shields.io/badge/Lighthouse-Audit-00B0FF?style=for-the-badge&logo=lighthouse&logoColor=white)](./assets/downloads/lighthouse-performance-report.pdf)
 
 ![Status](https://img.shields.io/badge/status-complete-brightgreen)
-![Learning Path](https://img.shields.io/badge/learning%20path-month%201-blue)
-![Views](https://visitor-badge.laobi.icu/badge?page_id=CodingWithJiro.REPO_NAME&left_text=repo%20views)
+![Learning Path](https://img.shields.io/badge/learning%20path-month%206-blue)
+![Views](https://visitor-badge.laobi.icu/badge?page_id=CodingWithJiro.wesbos-js-30-clock&left_text=repo%20views)
 
 ## ℹ️ ADD PROJECT SUBTITLE
 
