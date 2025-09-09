@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ADD_TITLE_HERE</title>
+
+    <meta name="author" content="Elmar Chavez" />
+
+    <meta name="description" content="ADD_DESCRIPTION_HERE" />
+
+    <!-- DELETE UNAVAILABLE ICONS -->
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/icons/favicon-16x16.png"
+    />
+    <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png" />
+
+    <meta property="og:site_name" content="CodingWithJiro" />
+    <meta property="og:title" content="ADD_TITLE_HERE" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="ADD_OG_DESCRIPTION_HERE" />
+    <meta property="og:url" content="ADD_LINK_HERE" />
+    <meta
+      property="og:image"
+      content="ADD_LINK_HEREassets/img/site-preview-meta_1200x630.png"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ADD_TITLE_HERE" />
+    <meta name="twitter:description" content="ADD_TWITTER_DESCRIPTION_HERE" />
+    <meta
+      name="twitter:image"
+      content="ADD_LINK_HEREassets/img/site-preview-meta_1200x630.png"
+    />
+
+    <!-- UPDATE COLOR & THEME -->
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      name="theme-color"
+      content="#ffffff"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#1a1a1a"
+      media="(prefers-color-scheme: dark)"
+    />
+
+    <meta name="robots" content="index, follow" />
+
+    <link rel="canonical" href="ADD_LINK_HERE" />
+
+    <link
+      rel="preload"
+      href="ADD_FONT_LINK_HERE"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <a
+        class="header__skip sr-only"
+        href="#main"
+        aria-label="Skip to main content"
+      >
+        Go directly to the main content of the page.
+      </a>
+
+      <div class="theme">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="theme__icon theme__icon--light"
+          aria-hidden="true"
+        >
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            <g clip-path="url(#a)" fill="currentColor">
+              <path
+                d="M12 0a1 1 0 0 1 1 1v4a1 1 0 1 1-2 0V1a1 1 0 0 1 1-1ZM4.929 3.515a1 1 0 0 0-1.414 1.414l2.828 2.828a1 1 0 0 0 1.414-1.414L4.93 3.515ZM1 11a1 1 0 1 0 0 2h4a1 1 0 1 0 0-2H1ZM18 12a1 1 0 0 1 1-1h4a1 1 0 1 1 0 2h-4a1 1 0 0 1-1-1ZM17.657 16.243a1 1 0 0 0-1.414 1.414l2.828 2.828a1 1 0 1 0 1.414-1.414l-2.828-2.828ZM7.757 17.657a1 1 0 1 0-1.414-1.414L3.515 19.07a1 1 0 1 0 1.414 1.414l2.828-2.828ZM20.485 4.929a1 1 0 0 0-1.414-1.414l-2.828 2.828a1 1 0 1 0 1.414 1.414l2.828-2.828ZM13 19a1 1 0 1 0-2 0v4a1 1 0 1 0 2 0v-4ZM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z"
+              ></path>
+            </g>
+            <defs>
+              <clipPath id="a">
+                <path fill="#ffffff" d="M0 0h24v24H0z"></path>
+              </clipPath>
+            </defs>
+          </g>
+        </svg>
+
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="theme__icon theme__icon--dark hidden"
+          aria-hidden="true"
+        >
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            <path
+              d="M9.272 2.406a1 1 0 0 0-1.23-1.355C6.59 1.535 5.432 2.487 4.37 3.55a11.399 11.399 0 0 0 0 16.182c4.518 4.519 11.51 4.261 15.976-.205 1.062-1.062 2.014-2.22 2.498-3.673A1 1 0 0 0 21.55 14.6c-3.59 1.322-7.675.734-10.434-2.025-2.765-2.766-3.328-6.83-1.844-10.168Z"
+              fill="currentColor"
+            ></path>
+          </g>
+        </svg>
+
+        <button
+          type="button"
+          aria-label="Switch to dark theme"
+          aria-pressed="false"
+          class="theme__button"
+        ></button>
+      </div>
+    </header>
+
+    <main class="main" id="main"></main>
+
+    <footer class="footer"></footer>
+
+    <script type="module" src="./js/index.js"></script>
+  </body>
+</html>
