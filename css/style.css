@@ -56,12 +56,11 @@ ol {
 /* CHANGE THE DATA BELOW AS NEEDED */
 :root {
   /* FONTS */
-  --FF: "Arial", sans-serif;
+  --FF: "Roboto", sans-serif;
   --FS: 1rem;
 
   /* COLORS */
   --BGCOLOR: #fff;
-  --FONT-COLOR: #000;
 
   /* THEME TOGGLE COLORS */
   --FONT-COLOR-THEME-ICON-LIGHT: #333;
