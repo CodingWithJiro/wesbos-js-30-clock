@@ -112,7 +112,8 @@ html {
 body {
   min-height: 100vh;
   background-color: var(--BGCOLOR);
-  color: var(--FONT-COLOR);
+  /*! TO DELETE: COLOR RED */
+  color: red;
 }
 
 /** || HEADER */
