@@ -38,15 +38,18 @@ ol {
 /** || FONTS */
 @font-face {
   font-display: swap;
-  font-family: "INSERT_FONT_NAME";
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  src: url("../LINK/TO/FONT") format("woff2");
-  /* 
-  NOTE:
-  - woff2 is considered modern best practice 
-  - copy pase @font-face code blocks from GWFH
-  */
+  src: url("../assets/fonts/roboto-v48-latin-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../assets/fonts/roboto-v48-latin-700.woff2") format("woff2");
 }
 
 /** || VARIABLES */
