@@ -189,6 +189,7 @@ body {
   border: 2px solid red;
   min-width: 17rem;
   min-height: 17rem;
+  aspect-ratio: 1/1;
   width: 100%;
   border-radius: 100%;
   position: relative;
