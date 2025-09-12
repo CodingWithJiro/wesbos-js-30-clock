@@ -193,6 +193,12 @@ body {
   border-radius: 100%;
 }
 
+.clock__marker {
+  width: 0.2rem;
+  height: 1rem;
+  background-color: red;
+}
+
 /** || MEDIA QUERY (DEVICE WIDTH) */
 @media screen and (min-width: 23.4375rem) {
 }
