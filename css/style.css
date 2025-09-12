@@ -226,6 +226,54 @@ body {
   left: 5%;
 }
 
+.clock__marker--1 {
+  transform: rotate(30deg);
+  top: 12.6%;
+  left: 72.5%;
+}
+
+.clock__marker--2 {
+  transform: rotate(60deg);
+  top: 30.5%;
+  left: 87.4%;
+}
+
+.clock__marker--4 {
+  transform: rotate(120deg);
+  top: 67.5%;
+  left: 87.4%;
+}
+
+.clock__marker--5 {
+  transform: rotate(150deg);
+  top: 82.4%;
+  left: 72.5%;
+}
+
+.clock__marker--7 {
+  transform: rotate(210deg);
+  top: 82.4%;
+  left: 27.5%;
+}
+
+.clock__marker--8 {
+  transform: rotate(240deg);
+  top: 67.5%;
+  left: 12.6%;
+}
+
+.clock__marker--10 {
+  transform: rotate(300deg);
+  top: 30.5%;
+  left: 12.6%;
+}
+
+.clock__marker--11 {
+  transform: rotate(330deg);
+  top: 12.6%;
+  left: 27.5%;
+}
+
 /** || MEDIA QUERY (DEVICE WIDTH) */
 @media screen and (min-width: 23.4375rem) {
 }
