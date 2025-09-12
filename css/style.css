@@ -203,6 +203,27 @@ body {
 .clock__time,
 .clock__marker {
   position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.clock__time--12 {
+  top: 5%;
+  left: 50%;
+}
+
+.clock__time--3 {
+  top: 50%;
+  left: 95%;
+}
+
+.clock__time--6 {
+  top: 95%;
+  left: 50%;
+}
+
+.clock__time--9 {
+  top: 50%;
+  left: 5%;
 }
 
 /** || MEDIA QUERY (DEVICE WIDTH) */
