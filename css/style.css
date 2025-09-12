@@ -180,6 +180,18 @@ body {
 /** || FOOTER */
 
 /** || MAIN */
+.clock {
+  border: 3px solid red;
+  padding: 1em;
+}
+
+.clock__assets {
+  border: 2px solid red;
+  min-width: 17rem;
+  min-height: 17rem;
+  width: 100%;
+  border-radius: 100%;
+}
 
 /** || MEDIA QUERY (DEVICE WIDTH) */
 @media screen and (min-width: 23.4375rem) {
