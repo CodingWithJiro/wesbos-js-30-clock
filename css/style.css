@@ -103,6 +103,10 @@ ol {
   display: none;
 }
 
+.container {
+  padding-inline: 1.5rem;
+}
+
 /** || GENERAL STYLES */
 html {
   font-size: var(--FS);
