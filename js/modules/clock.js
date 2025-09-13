@@ -7,6 +7,12 @@ let secondDegrees = dateNow.getSeconds() * 6;
 let minuteDegrees = dateNow.getMinutes() * 6;
 let hourDegrees = dateNow.getHours() * 30;
 
+function displayInitialTime() {
+  second.style.transform = `translate(-50%, -100%) rotate(${secondDegrees}deg)`;
+  minute.style.transform = `translate(-50%, -100%) rotate(${minuteDegrees}deg)`;
+  hour.style.transform = `translate(-50%, -100%) rotate(${hourDegrees}deg)`;
+}
+
 function rotateSecondsHand() {
   setInterval(() => {
     if (secondDegrees === 354) {
@@ -23,5 +29,6 @@ function rotateSecondsHand() {
 }
 
 export function initClock() {
+  displayInitialTime();
   rotateSecondsHand();
 }
