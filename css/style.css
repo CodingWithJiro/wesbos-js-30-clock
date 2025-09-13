@@ -277,7 +277,8 @@ body {
 
 .clock__hour {
   position: absolute;
-  transform: translate(-50%, -100%);
+  transform: translate(-50%, -100%) rotate(0deg);
+  transform-origin: bottom;
   top: 50%;
   left: 50%;
   width: 0.3rem;
@@ -287,7 +288,8 @@ body {
 
 .clock__minute {
   position: absolute;
-  transform: translate(-50%, -100%);
+  transform: translate(-50%, -100%) rotate(0deg);
+  transform-origin: bottom;
   top: 50%;
   left: 50%;
   width: 0.2rem;
@@ -297,7 +299,8 @@ body {
 
 .clock__second {
   position: absolute;
-  transform: translate(-50%, -100%);
+  transform: translate(-50%, -100%) rotate(0deg);
+  transform-origin: bottom;
   top: 50%;
   left: 50%;
   width: 0.1rem;
