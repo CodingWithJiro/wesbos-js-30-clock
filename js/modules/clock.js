@@ -18,6 +18,7 @@ function rotateSecondsHand() {
     if (secondDegrees === 354) {
       second.style.transition = "none";
       secondDegrees = 0;
+      rotateMinutesHand();
     } else {
       second.style.transition =
         "transform 0.05s cubic-bezier(0.1, 2.7, 0.58, 1)";
@@ -26,6 +27,18 @@ function rotateSecondsHand() {
 
     second.style.transform = `translate(-50%, -100%) rotate(${secondDegrees}deg)`;
   }, 1000);
+}
+
+function rotateMinutesHand() {
+  if (minuteDegrees === 354) {
+    minute.style.transition = "none";
+    minuteDegrees = 0;
+  } else {
+    minute.style.transition = "transform 0.05s cubic-bezier(0.1, 2.7, 0.58, 1)";
+    minuteDegrees += 6;
+  }
+
+  minute.style.transform = `translate(-50%, -100%) rotate(${minuteDegrees}deg)`;
 }
 
 export function initClock() {
