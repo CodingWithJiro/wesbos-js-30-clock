@@ -4,6 +4,8 @@ const minute = document.querySelector(".clock__minute");
 const second = document.querySelector(".clock__second");
 const dateNow = new Date();
 let secondDegrees = dateNow.getSeconds() * 6;
+let minuteDegrees = dateNow.getMinutes() * 6;
+let hourDegrees = dateNow.getHours() * 30;
 
 function rotateSecondsHand() {
   setInterval(() => {
