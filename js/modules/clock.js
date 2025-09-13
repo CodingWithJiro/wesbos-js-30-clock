@@ -5,7 +5,7 @@ const second = document.querySelector(".clock__second");
 const dateNow = new Date();
 let secondDegrees = dateNow.getSeconds() * 6;
 let minuteDegrees = dateNow.getMinutes() * 6;
-let hourDegrees = dateNow.getHours() * 30 + minuteDegrees * 0.5;
+let hourDegrees = (dateNow.getHours() % 12) * 30 + dateNow.getMinutes() * 0.5;
 
 function displayInitialTime() {
   second.style.transform = `translate(-50%, -100%) rotate(${secondDegrees}deg)`;
