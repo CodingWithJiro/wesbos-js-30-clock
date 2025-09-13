@@ -45,8 +45,6 @@ function rotateMinutesHand() {
 }
 
 function rotateHoursHand() {
-  console.log("Hello");
-
   if (hourDegrees === 359.5) {
     hour.style.transition = "none";
     hourDegrees = 0;
