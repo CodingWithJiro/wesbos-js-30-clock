@@ -7,6 +7,8 @@ let secondDegrees = dateNow.getSeconds() * 6;
 let minuteDegrees = dateNow.getMinutes() * 6;
 let hourDegrees = (dateNow.getHours() % 12) * 30 + dateNow.getMinutes() * 0.5;
 
+console.log(hourDegrees);
+
 function displayInitialTime() {
   second.style.transform = `translate(-50%, -100%) rotate(${secondDegrees}deg)`;
   minute.style.transform = `translate(-50%, -100%) rotate(${minuteDegrees}deg)`;
@@ -19,6 +21,7 @@ function rotateSecondsHand() {
       second.style.transition = "none";
       secondDegrees = 0;
       rotateMinutesHand();
+      rotateHoursHand();
     } else {
       second.style.transition =
         "transform 0.05s cubic-bezier(0.1, 2.7, 0.58, 1)";
@@ -39,6 +42,20 @@ function rotateMinutesHand() {
   }
 
   minute.style.transform = `translate(-50%, -100%) rotate(${minuteDegrees}deg)`;
+}
+
+function rotateHoursHand() {
+  console.log("Hello");
+
+  if (hourDegrees === 359.5) {
+    hour.style.transition = "none";
+    hourDegrees = 0;
+  } else {
+    hour.style.transition = "transform 0.05s linear";
+    hourDegrees += 0.5;
+  }
+
+  hour.style.transform = `translate(-50%, -100%) rotate(${hourDegrees}deg)`;
 }
 
 export function initClock() {
