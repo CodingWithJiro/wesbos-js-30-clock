@@ -7,12 +7,11 @@ let secondDegrees = dateNow.getSeconds() * 6;
 
 function rotateSecondsHand() {
   setInterval(() => {
-    console.log(secondDegrees);
     if (secondDegrees === 354) {
-      second.style.transform = "none";
+      second.style.transition = "none";
       secondDegrees = 0;
     } else {
-      second.style.transform =
+      second.style.transition =
         "transform 0.05s cubic-bezier(0.1, 2.7, 0.58, 1)";
       secondDegrees += 6;
     }
