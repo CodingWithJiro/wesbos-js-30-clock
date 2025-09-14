@@ -7,8 +7,6 @@ let secondDegrees = dateNow.getSeconds() * 6;
 let minuteDegrees = dateNow.getMinutes() * 6;
 let hourDegrees = (dateNow.getHours() % 12) * 30 + dateNow.getMinutes() * 0.5;
 
-console.log(hourDegrees);
-
 function displayInitialTime() {
   second.style.transform = `translate(-50%, -100%) rotate(${secondDegrees}deg)`;
   minute.style.transform = `translate(-50%, -100%) rotate(${minuteDegrees}deg)`;
