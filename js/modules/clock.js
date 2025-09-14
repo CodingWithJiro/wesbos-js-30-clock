@@ -2,6 +2,7 @@
 const hour = document.querySelector(".clock__hour");
 const minute = document.querySelector(".clock__minute");
 const second = document.querySelector(".clock__second");
+const digitalTime = document.querySelector(".clock__digital-time");
 const dateNow = new Date();
 let secondDegrees = dateNow.getSeconds() * 6;
 let minuteDegrees = dateNow.getMinutes() * 6;
