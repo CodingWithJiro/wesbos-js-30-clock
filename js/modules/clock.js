@@ -55,7 +55,23 @@ function rotateHoursHand() {
   hour.style.transform = `translate(-50%, -100%) rotate(${hourDegrees}deg)`;
 }
 
+function initDigitalClock() {
+  setInterval(() => {
+    const currentHour =
+      new Date().getHours() > 12
+        ? String(new Date().getHours() - 12).padStart(2, "0")
+        : String(new Date().getHours()).padStart(2, "0");
+    const currentMinute = String(new Date().getMinutes()).padStart(2, "0");
+    const isAM = new Date().getHours() < 12;
+
+    digitalTime.innerHTML = `${currentHour}:${currentMinute} <span class="clock__am-pm">${
+      isAM ? "AM" : "PM"
+    }</span>`;
+  }, 1000);
+}
+
 export function initClock() {
   displayInitialTime();
   rotateSecondsHand();
+  initDigitalClock();
 }
