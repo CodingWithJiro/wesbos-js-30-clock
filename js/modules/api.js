@@ -1,4 +1,4 @@
-//* API.JS SCRIPT
+// * API.JS SCRIPT
 
 export async function getUserData() {
   try {
