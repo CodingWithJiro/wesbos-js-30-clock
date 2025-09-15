@@ -3,10 +3,34 @@ const hour = document.querySelector(".clock__hour");
 const minute = document.querySelector(".clock__minute");
 const second = document.querySelector(".clock__second");
 const digitalTime = document.querySelector(".clock__digital-time");
+const date = document.querySelector(".clock__date");
 const dateNow = new Date();
 let secondDegrees = dateNow.getSeconds() * 6;
 let minuteDegrees = dateNow.getMinutes() * 6;
 let hourDegrees = (dateNow.getHours() % 12) * 30 + dateNow.getMinutes() * 0.5;
+const months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+const days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
 
 function displayInitialTime() {
   second.style.transform = `translate(-50%, -100%) rotate(${secondDegrees}deg)`;
@@ -70,8 +94,18 @@ function initDigitalClock() {
   }, 1000);
 }
 
+function initDate() {
+  setInterval(() => {
+    const currentDate = new Date();
+    date.textContent = `${
+      months[currentDate.getMonth()]
+    } ${currentDate.getDate()}, ${days[currentDate.getDay()]}`;
+  }, 1000);
+}
+
 export function initClock() {
   displayInitialTime();
   rotateSecondsHand();
   initDigitalClock();
+  initDate();
 }
