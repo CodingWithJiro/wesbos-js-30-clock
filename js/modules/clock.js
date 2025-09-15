@@ -3,6 +3,7 @@ const hour = document.querySelector(".clock__hour");
 const minute = document.querySelector(".clock__minute");
 const second = document.querySelector(".clock__second");
 const digitalTime = document.querySelector(".clock__digital-time");
+const date = document.querySelector(".clock__date");
 const dateNow = new Date();
 let secondDegrees = dateNow.getSeconds() * 6;
 let minuteDegrees = dateNow.getMinutes() * 6;
@@ -20,6 +21,15 @@ const months = [
   "October",
   "November",
   "December",
+];
+const days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
 ];
 
 function displayInitialTime() {
