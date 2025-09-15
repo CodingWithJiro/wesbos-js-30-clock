@@ -94,8 +94,18 @@ function initDigitalClock() {
   }, 1000);
 }
 
+function initDate() {
+  setInterval(() => {
+    const currentDate = new Date();
+    date.textContent = `${
+      months[currentDate.getMonth()]
+    } ${currentDate.getDate()}, ${days[currentDate.getDay()]}`;
+  }, 1000);
+}
+
 export function initClock() {
   displayInitialTime();
   rotateSecondsHand();
   initDigitalClock();
+  initDate();
 }
