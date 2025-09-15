@@ -84,7 +84,9 @@ function initDigitalClock() {
     const currentHour =
       new Date().getHours() > 12
         ? String(new Date().getHours() - 12).padStart(2, "0")
-        : String(new Date().getHours()).padStart(2, "0");
+        : String(
+            new Date().getHours() === 0 ? 12 : new Date().getHours()
+          ).padStart(2, "0");
     const currentMinute = String(new Date().getMinutes()).padStart(2, "0");
     const isAM = new Date().getHours() < 12;
 
