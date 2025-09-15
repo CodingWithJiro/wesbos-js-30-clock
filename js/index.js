@@ -6,4 +6,3 @@ import { initApi } from "./modules/api.js";
 // * INITIALIZE SCRIPTS
 initThemeToggle();
 initClock();
-initApi();
