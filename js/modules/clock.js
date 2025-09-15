@@ -2,12 +2,11 @@
 const hour = document.querySelector(".clock__hour");
 const minute = document.querySelector(".clock__minute");
 const second = document.querySelector(".clock__second");
+const digitalTime = document.querySelector(".clock__digital-time");
 const dateNow = new Date();
 let secondDegrees = dateNow.getSeconds() * 6;
 let minuteDegrees = dateNow.getMinutes() * 6;
 let hourDegrees = (dateNow.getHours() % 12) * 30 + dateNow.getMinutes() * 0.5;
-
-console.log(hourDegrees);
 
 function displayInitialTime() {
   second.style.transform = `translate(-50%, -100%) rotate(${secondDegrees}deg)`;
@@ -56,7 +55,23 @@ function rotateHoursHand() {
   hour.style.transform = `translate(-50%, -100%) rotate(${hourDegrees}deg)`;
 }
 
+function initDigitalClock() {
+  setInterval(() => {
+    const currentHour =
+      new Date().getHours() > 12
+        ? String(new Date().getHours() - 12).padStart(2, "0")
+        : String(new Date().getHours()).padStart(2, "0");
+    const currentMinute = String(new Date().getMinutes()).padStart(2, "0");
+    const isAM = new Date().getHours() < 12;
+
+    digitalTime.innerHTML = `${currentHour}:${currentMinute} <span class="clock__am-pm">${
+      isAM ? "AM" : "PM"
+    }</span>`;
+  }, 1000);
+}
+
 export function initClock() {
   displayInitialTime();
   rotateSecondsHand();
+  initDigitalClock();
 }
