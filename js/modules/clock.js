@@ -7,6 +7,20 @@ const dateNow = new Date();
 let secondDegrees = dateNow.getSeconds() * 6;
 let minuteDegrees = dateNow.getMinutes() * 6;
 let hourDegrees = (dateNow.getHours() % 12) * 30 + dateNow.getMinutes() * 0.5;
+const months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
 
 function displayInitialTime() {
   second.style.transform = `translate(-50%, -100%) rotate(${secondDegrees}deg)`;
