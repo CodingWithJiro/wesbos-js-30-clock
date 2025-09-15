@@ -1,6 +1,6 @@
 //* API.JS SCRIPT
 
-async function getUserData() {
+export async function getUserData() {
   try {
     const response = await fetch("https://ipapi.co/json/");
     const data = await response.json();
@@ -10,5 +10,3 @@ async function getUserData() {
     return null;
   }
 }
-
-export function initApi() {}
