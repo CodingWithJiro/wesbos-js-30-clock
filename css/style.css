@@ -62,6 +62,7 @@ ol {
   /* COLORS */
   --BGCOLOR: #f0f5f8;
   --FONT-COLOR-HEADER-TITLE: #000;
+  --FONT-COLOR-HEADER-SUBTITLE: #000;
 
   /* THEME TOGGLE COLORS */
   --FONT-COLOR-THEME-ICON-LIGHT: #333;
@@ -187,6 +188,13 @@ body {
   font-weight: 700;
   text-align: center;
   color: var(--FONT-COLOR-HEADER-TITLE);
+}
+
+.header__subtitle {
+  font-family: var(--FF);
+  font-weight: 400;
+  text-align: center;
+  color: var(--FONT-COLOR-HEADER-SUBTITLE);
 }
 
 /** || FOOTER */
