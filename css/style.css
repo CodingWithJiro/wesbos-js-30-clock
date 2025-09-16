@@ -352,6 +352,15 @@ body {
   font-size: 0.9rem;
 }
 
+.footer__link {
+  font-weight: 700;
+}
+
+.footer__link:hover,
+.footer__link:focus-visible {
+  text-decoration: underline;
+}
+
 /** || MEDIA QUERY (DEVICE WIDTH) */
 @media screen and (min-width: 23.4375rem) {
 }
