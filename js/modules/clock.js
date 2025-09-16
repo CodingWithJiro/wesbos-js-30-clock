@@ -81,14 +81,13 @@ function rotateHoursHand() {
 
 function initDigitalClock() {
   setInterval(() => {
+    const now = new Date();
     const currentHour =
-      new Date().getHours() > 12
-        ? String(new Date().getHours() - 12).padStart(2, "0")
-        : String(
-            new Date().getHours() === 0 ? 12 : new Date().getHours()
-          ).padStart(2, "0");
-    const currentMinute = String(new Date().getMinutes()).padStart(2, "0");
-    const isAM = new Date().getHours() < 12;
+      now.getHours() > 12
+        ? String(now.getHours() - 12).padStart(2, "0")
+        : String(now.getHours() === 0 ? 12 : now.getHours()).padStart(2, "0");
+    const currentMinute = String(now.getMinutes()).padStart(2, "0");
+    const isAM = now.getHours() < 12;
 
     digitalTime.innerHTML = `${currentHour}:${currentMinute} <span class="clock__am-pm">${
       isAM ? "AM" : "PM"
