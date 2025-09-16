@@ -61,6 +61,7 @@ ol {
 
   /* COLORS */
   --BGCOLOR: #fff;
+  --FONT-COLOR-HEADER-TITLE: #000;
 
   /* THEME TOGGLE COLORS */
   --FONT-COLOR-THEME-ICON-LIGHT: #333;
@@ -179,6 +180,13 @@ body {
 
 .header__container {
   padding-block-start: 5em;
+}
+
+.header__title {
+  font-family: var(--FF);
+  font-weight: 700;
+  text-align: center;
+  color: var(--FONT-COLOR-HEADER-TITLE);
 }
 
 /** || FOOTER */
