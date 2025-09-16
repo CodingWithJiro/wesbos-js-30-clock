@@ -60,7 +60,9 @@ ol {
   --FS: 1rem;
 
   /* COLORS */
-  --BGCOLOR: #fff;
+  --BGCOLOR: #f0f5f8;
+  --FONT-COLOR-HEADER-TITLE: #000;
+  --FONT-COLOR-HEADER-SUBTITLE: #000;
 
   /* THEME TOGGLE COLORS */
   --FONT-COLOR-THEME-ICON-LIGHT: #333;
@@ -175,6 +177,28 @@ body {
 
 .theme__icon--dark {
   color: var(--FONT-COLOR-THEME-ICON-DARK);
+}
+
+.header {
+  margin-block-end: 2em;
+}
+
+.header__container {
+  padding-block-start: 5em;
+}
+
+.header__title {
+  font-family: var(--FF);
+  font-weight: 700;
+  text-align: center;
+  color: var(--FONT-COLOR-HEADER-TITLE);
+}
+
+.header__subtitle {
+  font-family: var(--FF);
+  font-weight: 400;
+  text-align: center;
+  color: var(--FONT-COLOR-HEADER-SUBTITLE);
 }
 
 /** || FOOTER */
