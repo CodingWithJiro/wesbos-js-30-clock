@@ -119,6 +119,7 @@ html {
 body {
   min-height: 100vh;
   background-color: var(--BGCOLOR);
+  position: relative;
   /*! TO DELETE: COLOR RED */
   color: red;
 }
@@ -345,6 +346,14 @@ body {
 }
 
 /** || FOOTER */
+.footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .footer__tagline {
   color: var(--FONT-COLOR-FOOTER-TAGLINE);
   text-align: center;
