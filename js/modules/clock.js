@@ -39,20 +39,17 @@ function displayInitialTime() {
 }
 
 function rotateSecondsHand() {
-  setInterval(() => {
-    if (secondDegrees === 354) {
-      second.style.transition = "none";
-      secondDegrees = 0;
-      rotateMinutesHand();
-      rotateHoursHand();
-    } else {
-      second.style.transition =
-        "transform 0.05s cubic-bezier(0.1, 2.7, 0.58, 1)";
-      secondDegrees += 6;
-    }
+  if (secondDegrees === 354) {
+    second.style.transition = "none";
+    secondDegrees = 0;
+    rotateMinutesHand();
+    rotateHoursHand();
+  } else {
+    second.style.transition = "transform 0.05s cubic-bezier(0.1, 2.7, 0.58, 1)";
+    secondDegrees += 6;
+  }
 
-    second.style.transform = `translate(-50%, -100%) rotate(${secondDegrees}deg)`;
-  }, 1000);
+  second.style.transform = `translate(-50%, -100%) rotate(${secondDegrees}deg)`;
 }
 
 function rotateMinutesHand() {
@@ -68,7 +65,7 @@ function rotateMinutesHand() {
 }
 
 function rotateHoursHand() {
-  if (hourDegrees === 359.5) {
+  if (hourDegrees >= 359.5) {
     hour.style.transition = "none";
     hourDegrees = 0;
   } else {
@@ -80,34 +77,35 @@ function rotateHoursHand() {
 }
 
 function initDigitalClock() {
-  setInterval(() => {
-    const currentHour =
-      new Date().getHours() > 12
-        ? String(new Date().getHours() - 12).padStart(2, "0")
-        : String(
-            new Date().getHours() === 0 ? 12 : new Date().getHours()
-          ).padStart(2, "0");
-    const currentMinute = String(new Date().getMinutes()).padStart(2, "0");
-    const isAM = new Date().getHours() < 12;
+  const now = new Date();
+  const currentHour =
+    now.getHours() > 12
+      ? String(now.getHours() - 12).padStart(2, "0")
+      : String(now.getHours() === 0 ? 12 : now.getHours()).padStart(2, "0");
+  const currentMinute = String(now.getMinutes()).padStart(2, "0");
+  const isAM = now.getHours() < 12;
 
-    digitalTime.innerHTML = `${currentHour}:${currentMinute} <span class="clock__am-pm">${
-      isAM ? "AM" : "PM"
-    }</span>`;
-  }, 1000);
+  digitalTime.innerHTML = `${currentHour}:${currentMinute} <span class="clock__am-pm">${
+    isAM ? "AM" : "PM"
+  }</span>`;
 }
 
 function initDate() {
+  const currentDate = new Date();
+  date.textContent = `${
+    months[currentDate.getMonth()]
+  } ${currentDate.getDate()}, ${days[currentDate.getDay()]}`;
+}
+
+function initTick() {
   setInterval(() => {
-    const currentDate = new Date();
-    date.textContent = `${
-      months[currentDate.getMonth()]
-    } ${currentDate.getDate()}, ${days[currentDate.getDay()]}`;
+    rotateSecondsHand();
+    initDigitalClock();
+    initDate();
   }, 1000);
 }
 
 export function initClock() {
   displayInitialTime();
-  rotateSecondsHand();
-  initDigitalClock();
-  initDate();
+  initTick();
 }
