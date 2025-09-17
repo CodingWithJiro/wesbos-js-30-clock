@@ -52,12 +52,13 @@ function rotateSecondsHand() {
 }
 
 function rotateMinutesHand() {
-  if (minuteDegrees === 354) {
+  const now = new Date();
+  minuteDegrees = now.getMinutes() * 6;
+
+  minute.style.transition = "transform 0.05s cubic-bezier(0.1, 2.7, 0.58, 1)";
+
+  if (minuteDegrees === 0) {
     minute.style.transition = "none";
-    minuteDegrees = 0;
-  } else {
-    minute.style.transition = "transform 0.05s cubic-bezier(0.1, 2.7, 0.58, 1)";
-    minuteDegrees += 6;
   }
 
   minute.style.transform = `translate(-50%, -100%) rotate(${minuteDegrees}deg)`;
@@ -99,6 +100,7 @@ function initDate() {
 function initTick() {
   setInterval(() => {
     rotateSecondsHand();
+    rotateMinutesHand();
     initDigitalClock();
     initDate();
   }, 1000);
