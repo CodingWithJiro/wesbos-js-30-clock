@@ -71,14 +71,15 @@ function rotateHoursHand(dateObject) {
   hour.style.transform = `translate(-50%, -100%) rotate(${hourDegrees}deg)`;
 }
 
-function initDigitalClock() {
-  const now = new Date();
+function initDigitalClock(dateObject) {
   const currentHour =
-    now.getHours() > 12
-      ? String(now.getHours() - 12).padStart(2, "0")
-      : String(now.getHours() === 0 ? 12 : now.getHours()).padStart(2, "0");
-  const currentMinute = String(now.getMinutes()).padStart(2, "0");
-  const isAM = now.getHours() < 12;
+    dateObject.getHours() > 12
+      ? String(dateObject.getHours() - 12).padStart(2, "0")
+      : String(
+          dateObject.getHours() === 0 ? 12 : dateObject.getHours()
+        ).padStart(2, "0");
+  const currentMinute = String(dateObject.getMinutes()).padStart(2, "0");
+  const isAM = dateObject.getHours() < 12;
 
   digitalTime.innerHTML = `${currentHour}:${currentMinute} <span class="clock__am-pm">${
     isAM ? "AM" : "PM"
@@ -99,7 +100,7 @@ function initTick() {
     rotateSecondsHand(now);
     rotateMinutesHand(now);
     rotateHoursHand(now);
-    initDigitalClock();
+    initDigitalClock(now);
     initDate();
   }, 1000);
 }
