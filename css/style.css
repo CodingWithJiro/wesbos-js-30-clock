@@ -349,8 +349,8 @@ body {
   transform-origin: bottom;
   top: 50%;
   left: 50%;
-  width: 0.1rem;
-  height: 6.5rem;
+  width: clamp(0.1rem, -0.025rem + 0.625vw, 0.15rem);
+  height: clamp(6.5rem, -3.5rem + 50vw, 10.5rem);
   background-color: var(--BGCOLOR-CLOCK-SECOND);
   border-radius: 100px;
 }
