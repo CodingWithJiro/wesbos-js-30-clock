@@ -66,10 +66,12 @@ ol {
   --BGCOLOR-CLOCK-HOUR: #000;
   --BGCOLOR-CLOCK-MINUTE: #fc3e55d6;
   --BGCOLOR-CLOCK-SECOND: hsla(0, 0%, 53%, 0.7);
+  --BGCOLOR-CLOCK-KNOB: #fc3e55d6;
   --FONT-COLOR-HEADER-TITLE: #000;
   --FONT-COLOR-HEADER-SUBTITLE: #000;
   --FONT-COLOR-CLOCK-TIME: #000;
   --FONT-COLOR-FOOTER-TAGLINE: #000;
+  --BORDER-COLOR-CLOCK-KNOB: #000;
   --SHADOW-COLOR-CLOCK-ASSETS-1: rgba(0, 0, 0, 0.25);
   --SHADOW-COLOR-CLOCK-ASSETS-2: #fff;
 
@@ -82,6 +84,7 @@ ol {
 
   /* BORDERS */
   --BORDER-THEME-BUTTON: 1px solid var(--BORDER-COLOR-THEME-BUTTON);
+  --BORDER-CLOCK-KNOB: 2.5px solid var(--BORDER-COLOR-CLOCK-KNOB);
 
   /* SHADOWS */
   --BOX-SHADOW-THEME: 0 0 3px var(--SHADOW-COLOR-THEME);
@@ -358,7 +361,8 @@ body {
   left: 50%;
   width: 0.5rem;
   height: 0.5rem;
-  background-color: red;
+  background-color: var(--BGCOLOR-CLOCK-KNOB);
+  border: var(--BORDER-CLOCK-KNOB);
   border-radius: 100%;
 }
 
