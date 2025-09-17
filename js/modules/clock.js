@@ -4,10 +4,6 @@ const minute = document.querySelector(".clock__minute");
 const second = document.querySelector(".clock__second");
 const digitalTime = document.querySelector(".clock__digital-time");
 const date = document.querySelector(".clock__date");
-const dateNow = new Date();
-let secondDegrees = dateNow.getSeconds() * 6;
-let minuteDegrees = dateNow.getMinutes() * 6;
-let hourDegrees = (dateNow.getHours() % 12) * 30 + dateNow.getMinutes() * 0.5;
 const months = [
   "January",
   "February",
@@ -33,75 +29,75 @@ const days = [
 ];
 
 function displayInitialTime() {
-  second.style.transform = `translate(-50%, -100%) rotate(${secondDegrees}deg)`;
-  minute.style.transform = `translate(-50%, -100%) rotate(${minuteDegrees}deg)`;
-  hour.style.transform = `translate(-50%, -100%) rotate(${hourDegrees}deg)`;
-}
-
-function rotateSecondsHand() {
-  if (secondDegrees === 354) {
-    second.style.transition = "none";
-    secondDegrees = 0;
-    rotateMinutesHand();
-    rotateHoursHand();
-  } else {
-    second.style.transition = "transform 0.05s cubic-bezier(0.1, 2.7, 0.58, 1)";
-    secondDegrees += 6;
-  }
-
-  second.style.transform = `translate(-50%, -100%) rotate(${secondDegrees}deg)`;
-}
-
-function rotateMinutesHand() {
-  if (minuteDegrees === 354) {
-    minute.style.transition = "none";
-    minuteDegrees = 0;
-  } else {
-    minute.style.transition = "transform 0.05s cubic-bezier(0.1, 2.7, 0.58, 1)";
-    minuteDegrees += 6;
-  }
-
-  minute.style.transform = `translate(-50%, -100%) rotate(${minuteDegrees}deg)`;
-}
-
-function rotateHoursHand() {
-  if (hourDegrees >= 359.5) {
-    hour.style.transition = "none";
-    hourDegrees = 0;
-  } else {
-    hour.style.transition = "transform 0.05s linear";
-    hourDegrees += 0.5;
-  }
-
-  hour.style.transform = `translate(-50%, -100%) rotate(${hourDegrees}deg)`;
-}
-
-function initDigitalClock() {
   const now = new Date();
+  const secondDegrees = now.getSeconds() * 6;
+  const minuteDegrees = now.getMinutes() * 6;
+  const hourDegrees = now.getHours() * 30 + now.getMinutes() * 0.5;
+
+  second.style.transform = `translate(-50%, -100%) rotate(${secondDegrees}deg)`;
+  minute.style.transform = `translate(-50%, -100%) rotate(${minuteDegrees}deg)`;
+  hour.style.transform = `translate(-50%, -100%) rotate(${hourDegrees}deg)`;
+}
+
+function setRotation(clockHand, degrees, transition) {
+  clockHand.style.transition = degrees === 0 ? "none" : transition;
+  clockHand.style.transform = `translate(-50%, -100%) rotate(${degrees}deg)`;
+}
+
+function rotateSecondsHand(dateObject) {
+  const secondDegrees = dateObject.getSeconds() * 6;
+  setRotation(
+    second,
+    secondDegrees,
+    "transform 0.05s cubic-bezier(0.1, 2.7, 0.58, 1)"
+  );
+}
+
+function rotateMinutesHand(dateObject) {
+  const minuteDegrees = dateObject.getMinutes() * 6;
+  setRotation(
+    minute,
+    minuteDegrees,
+    "transform 0.05s cubic-bezier(0.1, 2.7, 0.58, 1)"
+  );
+}
+
+function rotateHoursHand(dateObject) {
+  const hourDegrees =
+    dateObject.getHours() * 30 + dateObject.getMinutes() * 0.5;
+  setRotation(hour, hourDegrees, "transform 0.05s linear");
+}
+
+function initDigitalClock(dateObject) {
   const currentHour =
-    now.getHours() > 12
-      ? String(now.getHours() - 12).padStart(2, "0")
-      : String(now.getHours() === 0 ? 12 : now.getHours()).padStart(2, "0");
-  const currentMinute = String(now.getMinutes()).padStart(2, "0");
-  const isAM = now.getHours() < 12;
+    dateObject.getHours() > 12
+      ? String(dateObject.getHours() - 12).padStart(2, "0")
+      : String(
+          dateObject.getHours() === 0 ? 12 : dateObject.getHours()
+        ).padStart(2, "0");
+  const currentMinute = String(dateObject.getMinutes()).padStart(2, "0");
+  const isAM = dateObject.getHours() < 12;
 
   digitalTime.innerHTML = `${currentHour}:${currentMinute} <span class="clock__am-pm">${
     isAM ? "AM" : "PM"
   }</span>`;
 }
 
-function initDate() {
-  const currentDate = new Date();
+function initDate(dateObject) {
   date.textContent = `${
-    months[currentDate.getMonth()]
-  } ${currentDate.getDate()}, ${days[currentDate.getDay()]}`;
+    months[dateObject.getMonth()]
+  } ${dateObject.getDate()}, ${days[dateObject.getDay()]}`;
 }
 
 function initTick() {
   setInterval(() => {
-    rotateSecondsHand();
-    initDigitalClock();
-    initDate();
+    const now = new Date();
+
+    rotateSecondsHand(now);
+    rotateMinutesHand(now);
+    rotateHoursHand(now);
+    initDigitalClock(now);
+    initDate(now);
   }, 1000);
 }
 
