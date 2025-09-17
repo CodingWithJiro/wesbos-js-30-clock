@@ -39,6 +39,11 @@ function displayInitialTime() {
   hour.style.transform = `translate(-50%, -100%) rotate(${hourDegrees}deg)`;
 }
 
+function setRotation(clockHand, degrees, transition) {
+  clockHand.style.transition = degrees === 0 ? "none" : transition;
+  clockHand.style.transform = `translate(-50%, -100%) rotate(${degrees}deg)`;
+}
+
 function rotateSecondsHand(dateObject) {
   const secondDegrees = dateObject.getSeconds() * 6;
   second.style.transition = "transform 0.05s cubic-bezier(0.1, 2.7, 0.58, 1)";
