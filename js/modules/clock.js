@@ -65,13 +65,7 @@ function rotateMinutesHand(dateObject) {
 function rotateHoursHand(dateObject) {
   const hourDegrees =
     dateObject.getHours() * 30 + dateObject.getMinutes() * 0.5;
-  hour.style.transition = "transform 0.05s linear";
-
-  if (hourDegrees === 0) {
-    hour.style.transition = "none";
-  }
-
-  hour.style.transform = `translate(-50%, -100%) rotate(${hourDegrees}deg)`;
+  setRotation(hour, hourDegrees, "transform 0.05s linear");
 }
 
 function initDigitalClock(dateObject) {
