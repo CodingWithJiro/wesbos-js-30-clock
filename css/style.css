@@ -63,6 +63,7 @@ ol {
   --BGCOLOR: #f0f5f8;
   --FONT-COLOR-HEADER-TITLE: #000;
   --FONT-COLOR-HEADER-SUBTITLE: #000;
+  --FONT-COLOR-FOOTER-TAGLINE: #000;
 
   /* THEME TOGGLE COLORS */
   --FONT-COLOR-THEME-ICON-LIGHT: #333;
@@ -118,6 +119,7 @@ html {
 body {
   min-height: 100vh;
   background-color: var(--BGCOLOR);
+  position: relative;
   /*! TO DELETE: COLOR RED */
   color: red;
 }
@@ -200,8 +202,6 @@ body {
   text-align: center;
   color: var(--FONT-COLOR-HEADER-SUBTITLE);
 }
-
-/** || FOOTER */
 
 /** || MAIN */
 .clock {
@@ -343,6 +343,31 @@ body {
   height: 0.5rem;
   background-color: red;
   border-radius: 100%;
+}
+
+/** || FOOTER */
+.footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.footer__tagline {
+  color: var(--FONT-COLOR-FOOTER-TAGLINE);
+  text-align: center;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.footer__link {
+  font-weight: 700;
+}
+
+.footer__link:hover,
+.footer__link:focus-visible {
+  text-decoration: underline;
 }
 
 /** || MEDIA QUERY (DEVICE WIDTH) */
