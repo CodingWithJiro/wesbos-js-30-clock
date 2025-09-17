@@ -4,10 +4,6 @@ const minute = document.querySelector(".clock__minute");
 const second = document.querySelector(".clock__second");
 const digitalTime = document.querySelector(".clock__digital-time");
 const date = document.querySelector(".clock__date");
-const dateNow = new Date();
-let secondDegrees = dateNow.getSeconds() * 6;
-let minuteDegrees = dateNow.getMinutes() * 6;
-let hourDegrees = (dateNow.getHours() % 12) * 30 + dateNow.getMinutes() * 0.5;
 const months = [
   "January",
   "February",
@@ -33,13 +29,18 @@ const days = [
 ];
 
 function displayInitialTime() {
+  const now = new Date();
+  const secondDegrees = now.getSeconds() * 6;
+  const minuteDegrees = now.getMinutes() * 6;
+  const hourDegrees = now.getHours() * 30 + now.getMinutes() * 0.5;
+
   second.style.transform = `translate(-50%, -100%) rotate(${secondDegrees}deg)`;
   minute.style.transform = `translate(-50%, -100%) rotate(${minuteDegrees}deg)`;
   hour.style.transform = `translate(-50%, -100%) rotate(${hourDegrees}deg)`;
 }
 
 function rotateSecondsHand(dateObject) {
-  secondDegrees = dateObject.getSeconds() * 6;
+  const secondDegrees = dateObject.getSeconds() * 6;
   second.style.transition = "transform 0.05s cubic-bezier(0.1, 2.7, 0.58, 1)";
 
   if (secondDegrees === 0) {
@@ -50,7 +51,7 @@ function rotateSecondsHand(dateObject) {
 }
 
 function rotateMinutesHand(dateObject) {
-  minuteDegrees = dateObject.getMinutes() * 6;
+  const minuteDegrees = dateObject.getMinutes() * 6;
   minute.style.transition = "transform 0.05s cubic-bezier(0.1, 2.7, 0.58, 1)";
 
   if (minuteDegrees === 0) {
@@ -61,7 +62,8 @@ function rotateMinutesHand(dateObject) {
 }
 
 function rotateHoursHand(dateObject) {
-  hourDegrees = dateObject.getHours() * 30 + dateObject.getMinutes() * 0.5;
+  const hourDegrees =
+    dateObject.getHours() * 30 + dateObject.getMinutes() * 0.5;
   hour.style.transition = "transform 0.05s linear";
 
   if (hourDegrees === 0) {
