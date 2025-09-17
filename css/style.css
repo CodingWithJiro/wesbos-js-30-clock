@@ -246,23 +246,23 @@ body {
 }
 
 .clock__time--12 {
-  top: 5%;
+  top: 7%;
   left: 50%;
 }
 
 .clock__time--3 {
   top: 50%;
-  left: 95%;
+  left: 93%;
 }
 
 .clock__time--6 {
-  top: 95%;
+  top: 93%;
   left: 50%;
 }
 
 .clock__time--9 {
   top: 50%;
-  left: 5%;
+  left: 7%;
 }
 
 .clock__marker--1 {
