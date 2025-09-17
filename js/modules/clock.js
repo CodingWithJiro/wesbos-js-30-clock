@@ -65,12 +65,13 @@ function rotateMinutesHand() {
 }
 
 function rotateHoursHand() {
-  if (hourDegrees >= 359.5) {
+  const now = new Date();
+  hourDegrees = now.getHours() * 30 + now.getMinutes() * 0.5;
+
+  hour.style.transition = "transform 0.05s linear";
+
+  if (hourDegrees === 0) {
     hour.style.transition = "none";
-    hourDegrees = 0;
-  } else {
-    hour.style.transition = "transform 0.05s linear";
-    hourDegrees += 0.5;
   }
 
   hour.style.transform = `translate(-50%, -100%) rotate(${hourDegrees}deg)`;
@@ -101,6 +102,7 @@ function initTick() {
   setInterval(() => {
     rotateSecondsHand();
     rotateMinutesHand();
+    rotateHoursHand();
     initDigitalClock();
     initDate();
   }, 1000);
