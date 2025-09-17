@@ -61,9 +61,19 @@ ol {
 
   /* COLORS */
   --BGCOLOR: #f0f5f8;
+  --BGCOLOR-CLOCK-ASSETS: #f0f5f8;
+  --BGCOLOR-CLOCK-MARKER: #000;
+  --BGCOLOR-CLOCK-HOUR: #000;
+  --BGCOLOR-CLOCK-MINUTE: #fc3e55d6;
+  --BGCOLOR-CLOCK-SECOND: hsla(0, 0%, 53%, 0.7);
+  --BGCOLOR-CLOCK-KNOB: #fc3e55d6;
   --FONT-COLOR-HEADER-TITLE: #000;
   --FONT-COLOR-HEADER-SUBTITLE: #000;
+  --FONT-COLOR-CLOCK-TIME: #000;
   --FONT-COLOR-FOOTER-TAGLINE: #000;
+  --BORDER-COLOR-CLOCK-KNOB: #000;
+  --SHADOW-COLOR-CLOCK-ASSETS-1: rgba(0, 0, 0, 0.25);
+  --SHADOW-COLOR-CLOCK-ASSETS-2: #fff;
 
   /* THEME TOGGLE COLORS */
   --FONT-COLOR-THEME-ICON-LIGHT: #333;
@@ -74,9 +84,12 @@ ol {
 
   /* BORDERS */
   --BORDER-THEME-BUTTON: 1px solid var(--BORDER-COLOR-THEME-BUTTON);
+  --BORDER-CLOCK-KNOB: 2.5px solid var(--BORDER-COLOR-CLOCK-KNOB);
 
   /* SHADOWS */
   --BOX-SHADOW-THEME: 0 0 3px var(--SHADOW-COLOR-THEME);
+  --BOX-SHADOW-CLOCK-ASSETS: 10px 10px 20px var(--SHADOW-COLOR-CLOCK-ASSETS-1),
+    -10px -10px 20px var(--SHADOW-COLOR-CLOCK-ASSETS-2);
 }
 
 /** || UTILITY CLASSES */
@@ -205,52 +218,57 @@ body {
 
 /** || MAIN */
 .clock {
-  border: 3px solid red;
   padding: 1em;
+  max-width: 30rem;
+  margin-inline: auto;
 }
 
 .clock__assets {
-  border: 2px solid red;
-  min-width: 17rem;
-  min-height: 17rem;
+  background-color: var(--BGCOLOR-CLOCK-ASSETS);
+  box-shadow: var(--BOX-SHADOW-CLOCK-ASSETS);
+  min-width: 15rem;
+  min-height: 15rem;
   aspect-ratio: 1/1;
   width: 100%;
   border-radius: 100%;
   position: relative;
+  margin-block-end: 2rem;
 }
 
 .clock__marker {
-  width: 0.2rem;
-  height: 1rem;
-  background-color: red;
+  background-color: var(--BGCOLOR-CLOCK-MARKER);
+  width: 0.0725rem;
+  height: clamp(0.65rem, -0.225rem + 4.375vw, 1rem);
   top: 50%;
   left: 50%;
   position: absolute;
 }
 
 .clock__time {
+  color: var(--FONT-COLOR-CLOCK-TIME);
   position: absolute;
   transform: translate(-50%, -50%);
+  font-size: clamp(1.3125rem, 0.21875rem + 5.46875vw, 1.75rem);
 }
 
 .clock__time--12 {
-  top: 5%;
+  top: 7%;
   left: 50%;
 }
 
 .clock__time--3 {
   top: 50%;
-  left: 95%;
+  left: 93%;
 }
 
 .clock__time--6 {
-  top: 95%;
+  top: 93%;
   left: 50%;
 }
 
 .clock__time--9 {
   top: 50%;
-  left: 5%;
+  left: 7%;
 }
 
 .clock__marker--1 {
@@ -307,9 +325,10 @@ body {
   transform-origin: bottom;
   top: 50%;
   left: 50%;
-  width: 0.3rem;
-  height: 4rem;
-  background-color: red;
+  width: clamp(0.1875rem, 0.0625rem + 0.625vw, 0.2375rem);
+  height: clamp(3.5rem, -4rem + 37.5vw, 6.5rem);
+  background-color: var(--BGCOLOR-CLOCK-HOUR);
+  border-radius: 100px;
 }
 
 .clock__minute {
@@ -318,9 +337,10 @@ body {
   transform-origin: bottom;
   top: 50%;
   left: 50%;
-  width: 0.2rem;
-  height: 6rem;
-  background-color: blue;
+  width: clamp(0.125rem, 2.7756rem + 0.625vw, 0.175rem);
+  height: clamp(5rem, -5rem + 50vw, 9rem);
+  background-color: var(--BGCOLOR-CLOCK-MINUTE);
+  border-radius: 100px;
 }
 
 .clock__second {
@@ -329,9 +349,10 @@ body {
   transform-origin: bottom;
   top: 50%;
   left: 50%;
-  width: 0.1rem;
-  height: 8rem;
-  background-color: black;
+  width: clamp(0.1rem, -0.025rem + 0.625vw, 0.15rem);
+  height: clamp(6.5rem, -3.5rem + 50vw, 10.5rem);
+  background-color: var(--BGCOLOR-CLOCK-SECOND);
+  border-radius: 100px;
 }
 
 .clock__knob {
@@ -341,7 +362,8 @@ body {
   left: 50%;
   width: 0.5rem;
   height: 0.5rem;
-  background-color: red;
+  background-color: var(--BGCOLOR-CLOCK-KNOB);
+  border: var(--BORDER-CLOCK-KNOB);
   border-radius: 100%;
 }
 
