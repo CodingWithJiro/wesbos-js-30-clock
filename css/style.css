@@ -238,7 +238,7 @@ body {
 .clock__marker {
   background-color: var(--BGCOLOR-CLOCK-MARKER);
   width: 0.0725rem;
-  height: 0.65rem;
+  height: clamp(0.65rem, -0.225rem + 4.375vw, 1rem);
   top: 50%;
   left: 50%;
   position: absolute;
