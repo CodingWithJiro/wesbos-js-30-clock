@@ -65,6 +65,8 @@ ol {
   --FONT-COLOR-HEADER-TITLE: #000;
   --FONT-COLOR-HEADER-SUBTITLE: #000;
   --FONT-COLOR-FOOTER-TAGLINE: #000;
+  --SHADOW-COLOR-CLOCK-ASSETS-1: rgba(0, 0, 0, 0.25);
+  --SHADOW-COLOR-CLOCK-ASSETS-2: #fff;
 
   /* THEME TOGGLE COLORS */
   --FONT-COLOR-THEME-ICON-LIGHT: #333;
@@ -78,6 +80,8 @@ ol {
 
   /* SHADOWS */
   --BOX-SHADOW-THEME: 0 0 3px var(--SHADOW-COLOR-THEME);
+  --BOX-SHADOW-CLOCK-ASSETS: 10px 10px 20px var(--SHADOW-COLOR-CLOCK-ASSETS-1),
+    -10px -10px 20px var(--SHADOW-COLOR-CLOCK-ASSETS-2);
 }
 
 /** || UTILITY CLASSES */
@@ -213,6 +217,7 @@ body {
 
 .clock__assets {
   background-color: var(--BGCOLOR-CLOCK-ASSETS);
+  box-shadow: var(--BOX-SHADOW-CLOCK-ASSETS);
   min-width: 15rem;
   min-height: 15rem;
   aspect-ratio: 1/1;
