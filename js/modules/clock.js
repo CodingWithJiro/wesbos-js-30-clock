@@ -38,10 +38,8 @@ function displayInitialTime() {
   hour.style.transform = `translate(-50%, -100%) rotate(${hourDegrees}deg)`;
 }
 
-function rotateSecondsHand() {
-  const now = new Date();
-  secondDegrees = now.getSeconds() * 6;
-
+function rotateSecondsHand(dateObject) {
+  secondDegrees = dateObject.getSeconds() * 6;
   second.style.transition = "transform 0.05s cubic-bezier(0.1, 2.7, 0.58, 1)";
 
   if (secondDegrees === 0) {
@@ -51,10 +49,8 @@ function rotateSecondsHand() {
   second.style.transform = `translate(-50%, -100%) rotate(${secondDegrees}deg)`;
 }
 
-function rotateMinutesHand() {
-  const now = new Date();
-  minuteDegrees = now.getMinutes() * 6;
-
+function rotateMinutesHand(dateObject) {
+  minuteDegrees = dateObject.getMinutes() * 6;
   minute.style.transition = "transform 0.05s cubic-bezier(0.1, 2.7, 0.58, 1)";
 
   if (minuteDegrees === 0) {
@@ -64,10 +60,8 @@ function rotateMinutesHand() {
   minute.style.transform = `translate(-50%, -100%) rotate(${minuteDegrees}deg)`;
 }
 
-function rotateHoursHand() {
-  const now = new Date();
-  hourDegrees = now.getHours() * 30 + now.getMinutes() * 0.5;
-
+function rotateHoursHand(dateObject) {
+  hourDegrees = dateObject.getHours() * 30 + dateObject.getMinutes() * 0.5;
   hour.style.transition = "transform 0.05s linear";
 
   if (hourDegrees === 0) {
@@ -100,9 +94,11 @@ function initDate() {
 
 function initTick() {
   setInterval(() => {
-    rotateSecondsHand();
-    rotateMinutesHand();
-    rotateHoursHand();
+    const now = new Date();
+
+    rotateSecondsHand(now);
+    rotateMinutesHand(now);
+    rotateHoursHand(now);
     initDigitalClock();
     initDate();
   }, 1000);
