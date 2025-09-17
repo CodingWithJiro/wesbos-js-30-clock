@@ -61,6 +61,7 @@ ol {
 
   /* COLORS */
   --BGCOLOR: #f0f5f8;
+  --BGCOLOR-CLOCK-ASSETS: #f0f5f8;
   --FONT-COLOR-HEADER-TITLE: #000;
   --FONT-COLOR-HEADER-SUBTITLE: #000;
   --FONT-COLOR-FOOTER-TAGLINE: #000;
@@ -211,9 +212,9 @@ body {
 }
 
 .clock__assets {
-  border: 2px solid red;
-  min-width: 17rem;
-  min-height: 17rem;
+  background-color: var(--BGCOLOR-CLOCK-ASSETS);
+  min-width: 15rem;
+  min-height: 15rem;
   aspect-ratio: 1/1;
   width: 100%;
   border-radius: 100%;
