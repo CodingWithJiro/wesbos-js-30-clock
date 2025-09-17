@@ -65,6 +65,7 @@ ol {
   --BGCOLOR-CLOCK-MARKER: #000;
   --BGCOLOR-CLOCK-HOUR: #000;
   --BGCOLOR-CLOCK-MINUTE: #fc3e55d6;
+  --BGCOLOR-CLOCK-SECOND: hsla(0, 0%, 53%, 0.7);
   --FONT-COLOR-HEADER-TITLE: #000;
   --FONT-COLOR-HEADER-SUBTITLE: #000;
   --FONT-COLOR-CLOCK-TIME: #000;
@@ -346,8 +347,8 @@ body {
   top: 50%;
   left: 50%;
   width: 0.1rem;
-  height: 8rem;
-  background-color: black;
+  height: 6.5rem;
+  background-color: var(--BGCOLOR-CLOCK-SECOND);
 }
 
 .clock__knob {
