@@ -248,7 +248,7 @@ body {
   color: var(--FONT-COLOR-CLOCK-TIME);
   position: absolute;
   transform: translate(-50%, -50%);
-  font-size: 1.3125rem;
+  font-size: clamp(1.3125rem, 0.21875rem + 5.46875vw, 1.75rem);
 }
 
 .clock__time--12 {
