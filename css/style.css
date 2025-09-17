@@ -65,6 +65,7 @@ ol {
   --BGCOLOR-CLOCK-MARKER: #000;
   --FONT-COLOR-HEADER-TITLE: #000;
   --FONT-COLOR-HEADER-SUBTITLE: #000;
+  --FONT-COLOR-CLOCK-TIME: #000;
   --FONT-COLOR-FOOTER-TAGLINE: #000;
   --SHADOW-COLOR-CLOCK-ASSETS-1: rgba(0, 0, 0, 0.25);
   --SHADOW-COLOR-CLOCK-ASSETS-2: #fff;
@@ -238,8 +239,10 @@ body {
 }
 
 .clock__time {
+  color: var(--FONT-COLOR-CLOCK-TIME);
   position: absolute;
   transform: translate(-50%, -50%);
+  font-size: 1.3125rem;
 }
 
 .clock__time--12 {
