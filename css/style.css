@@ -64,6 +64,7 @@ ol {
   --BGCOLOR-CLOCK-ASSETS: #f0f5f8;
   --BGCOLOR-CLOCK-MARKER: #000;
   --BGCOLOR-CLOCK-HOUR: #000;
+  --BGCOLOR-CLOCK-MINUTE: #fc3e55d6;
   --FONT-COLOR-HEADER-TITLE: #000;
   --FONT-COLOR-HEADER-SUBTITLE: #000;
   --FONT-COLOR-CLOCK-TIME: #000;
@@ -332,9 +333,10 @@ body {
   transform-origin: bottom;
   top: 50%;
   left: 50%;
-  width: 0.2rem;
-  height: 6rem;
-  background-color: blue;
+  width: 0.125rem;
+  height: 5rem;
+  background-color: var(--BGCOLOR-CLOCK-MINUTE);
+  border-radius: 100px;
 }
 
 .clock__second {
