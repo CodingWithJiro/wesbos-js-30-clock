@@ -86,11 +86,10 @@ function initDigitalClock(dateObject) {
   }</span>`;
 }
 
-function initDate() {
-  const currentDate = new Date();
+function initDate(dateObject) {
   date.textContent = `${
-    months[currentDate.getMonth()]
-  } ${currentDate.getDate()}, ${days[currentDate.getDay()]}`;
+    months[dateObject.getMonth()]
+  } ${dateObject.getDate()}, ${days[dateObject.getDay()]}`;
 }
 
 function initTick() {
@@ -101,7 +100,7 @@ function initTick() {
     rotateMinutesHand(now);
     rotateHoursHand(now);
     initDigitalClock(now);
-    initDate();
+    initDate(now);
   }, 1000);
 }
 
