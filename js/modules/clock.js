@@ -39,14 +39,13 @@ function displayInitialTime() {
 }
 
 function rotateSecondsHand() {
-  if (secondDegrees === 354) {
+  const now = new Date();
+  secondDegrees = now.getSeconds() * 6;
+
+  second.style.transition = "transform 0.05s cubic-bezier(0.1, 2.7, 0.58, 1)";
+
+  if (secondDegrees === 0) {
     second.style.transition = "none";
-    secondDegrees = 0;
-    rotateMinutesHand();
-    rotateHoursHand();
-  } else {
-    second.style.transition = "transform 0.05s cubic-bezier(0.1, 2.7, 0.58, 1)";
-    secondDegrees += 6;
   }
 
   second.style.transform = `translate(-50%, -100%) rotate(${secondDegrees}deg)`;
