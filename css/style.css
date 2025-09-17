@@ -219,6 +219,7 @@ body {
   width: 100%;
   border-radius: 100%;
   position: relative;
+  margin-block-end: 2rem;
 }
 
 .clock__marker {
