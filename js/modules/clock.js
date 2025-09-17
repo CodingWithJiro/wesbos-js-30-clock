@@ -46,13 +46,11 @@ function setRotation(clockHand, degrees, transition) {
 
 function rotateSecondsHand(dateObject) {
   const secondDegrees = dateObject.getSeconds() * 6;
-  second.style.transition = "transform 0.05s cubic-bezier(0.1, 2.7, 0.58, 1)";
-
-  if (secondDegrees === 0) {
-    second.style.transition = "none";
-  }
-
-  second.style.transform = `translate(-50%, -100%) rotate(${secondDegrees}deg)`;
+  setRotation(
+    second,
+    secondDegrees,
+    "transform 0.05s cubic-bezier(0.1, 2.7, 0.58, 1)"
+  );
 }
 
 function rotateMinutesHand(dateObject) {
