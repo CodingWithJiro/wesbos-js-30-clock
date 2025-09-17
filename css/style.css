@@ -62,6 +62,7 @@ ol {
   /* COLORS */
   --BGCOLOR: #f0f5f8;
   --BGCOLOR-CLOCK-ASSETS: #f0f5f8;
+  --BGCOLOR-CLOCK-MARKER: #000;
   --FONT-COLOR-HEADER-TITLE: #000;
   --FONT-COLOR-HEADER-SUBTITLE: #000;
   --FONT-COLOR-FOOTER-TAGLINE: #000;
@@ -228,9 +229,9 @@ body {
 }
 
 .clock__marker {
-  width: 0.2rem;
-  height: 1rem;
-  background-color: red;
+  background-color: var(--BGCOLOR-CLOCK-MARKER);
+  width: 0.0725rem;
+  height: 0.65rem;
   top: 50%;
   left: 50%;
   position: absolute;
