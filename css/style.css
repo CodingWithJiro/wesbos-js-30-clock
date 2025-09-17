@@ -325,8 +325,8 @@ body {
   transform-origin: bottom;
   top: 50%;
   left: 50%;
-  width: 0.1875rem;
-  height: 3.5rem;
+  width: clamp(0.1875rem, 0.0625rem + 0.625vw, 0.2375rem);
+  height: clamp(3.5rem, -4rem + 37.5vw, 6.5rem);
   background-color: var(--BGCOLOR-CLOCK-HOUR);
   border-radius: 100px;
 }
