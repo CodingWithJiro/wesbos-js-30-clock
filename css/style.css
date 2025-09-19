@@ -71,6 +71,7 @@ ol {
   --FONT-COLOR-HEADER-SUBTITLE: #000;
   --FONT-COLOR-CLOCK-TIME: #000;
   --FONT-COLOR-CLOCK-DIGITAL-TIME: #000;
+  --FONT-COLOR-CLOCK-LOCATION: #0000007a;
   --FONT-COLOR-FOOTER-TAGLINE: #000;
   --BORDER-COLOR-CLOCK-KNOB: #000;
   --SHADOW-COLOR-CLOCK-ASSETS-1: rgba(0, 0, 0, 0.25);
@@ -381,6 +382,12 @@ body {
 
 .clock__am-pm {
   font-size: 1.125rem;
+}
+
+.clock__location {
+  color: var(--FONT-COLOR-CLOCK-LOCATION);
+  font-size: 1.125rem;
+  margin-block-end: 1.2em;
 }
 
 /** || FOOTER */
