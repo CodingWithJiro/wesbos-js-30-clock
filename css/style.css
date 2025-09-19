@@ -70,6 +70,9 @@ ol {
   --FONT-COLOR-HEADER-TITLE: #000;
   --FONT-COLOR-HEADER-SUBTITLE: #000;
   --FONT-COLOR-CLOCK-TIME: #000;
+  --FONT-COLOR-CLOCK-DIGITAL-TIME: #000;
+  --FONT-COLOR-CLOCK-LOCATION: #0000007a;
+  --FONT-COLOR-CLOCK-DATE: #000;
   --FONT-COLOR-FOOTER-TAGLINE: #000;
   --BORDER-COLOR-CLOCK-KNOB: #000;
   --SHADOW-COLOR-CLOCK-ASSETS-1: rgba(0, 0, 0, 0.25);
@@ -133,8 +136,6 @@ body {
   min-height: 100vh;
   background-color: var(--BGCOLOR);
   position: relative;
-  /*! TO DELETE: COLOR RED */
-  color: red;
 }
 
 /** || HEADER */
@@ -365,6 +366,34 @@ body {
   background-color: var(--BGCOLOR-CLOCK-KNOB);
   border: var(--BORDER-CLOCK-KNOB);
   border-radius: 100%;
+}
+
+.clock__text {
+  text-align: center;
+  margin-inline: auto;
+}
+
+.clock__digital-time {
+  color: var(--FONT-COLOR-CLOCK-DIGITAL-TIME);
+  font-size: 2.25rem;
+  font-weight: 400;
+  display: block;
+  margin-block-end: 0.1em;
+}
+
+.clock__am-pm {
+  font-size: 1.125rem;
+}
+
+.clock__location {
+  color: var(--FONT-COLOR-CLOCK-LOCATION);
+  font-size: 1.125rem;
+  margin-block-end: 1.2em;
+}
+
+.clock__date {
+  color: var(--FONT-COLOR-CLOCK-DATE);
+  font-size: 1.125rem;
 }
 
 /** || FOOTER */
