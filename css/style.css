@@ -376,7 +376,11 @@ body {
 .clock__digital-time {
   color: var(--FONT-COLOR-CLOCK-DIGITAL-TIME);
   font-size: 2.25rem;
-  font-weight: 700;
+  font-weight: 400;
+}
+
+.clock__am-pm {
+  font-size: 1.125rem;
 }
 
 /** || FOOTER */
