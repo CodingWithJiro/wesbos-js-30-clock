@@ -196,7 +196,7 @@ body {
 }
 
 .header {
-  margin-block-end: 2em;
+  margin-block-end: clamp(1rem, 2.3521rem + -1.5023vw, 2rem);
 }
 
 .header__container {
