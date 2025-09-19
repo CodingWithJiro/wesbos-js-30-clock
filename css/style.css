@@ -229,6 +229,8 @@ body {
   box-shadow: var(--BOX-SHADOW-CLOCK-ASSETS);
   min-width: 15rem;
   min-height: 15rem;
+  max-width: 23rem;
+  max-height: 23rem;
   aspect-ratio: 1/1;
   width: 100%;
   border-radius: 100%;
