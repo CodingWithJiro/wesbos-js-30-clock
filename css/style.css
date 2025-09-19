@@ -367,6 +367,11 @@ body {
   border-radius: 100%;
 }
 
+.clock__text {
+  text-align: center;
+  margin-inline: auto;
+}
+
 /** || FOOTER */
 .footer {
   position: absolute;
