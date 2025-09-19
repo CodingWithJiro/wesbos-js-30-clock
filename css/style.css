@@ -196,11 +196,11 @@ body {
 }
 
 .header {
-  margin-block-end: 2em;
+  margin-block-end: clamp(1rem, 2.3521rem + -1.5023vw, 2rem);
 }
 
 .header__container {
-  padding-block-start: 5em;
+  padding-block-start: clamp(1.25rem, 6.3204rem + -5.6338vw, 5rem);
 }
 
 .header__title {
@@ -229,6 +229,9 @@ body {
   box-shadow: var(--BOX-SHADOW-CLOCK-ASSETS);
   min-width: 15rem;
   min-height: 15rem;
+  max-width: 23rem;
+  max-height: 23rem;
+  margin-inline: auto;
   aspect-ratio: 1/1;
   width: 100%;
   border-radius: 100%;
@@ -409,7 +412,7 @@ body {
   color: var(--FONT-COLOR-FOOTER-TAGLINE);
   text-align: center;
   font-weight: 400;
-  font-size: 0.9rem;
+  font-size: 0.825rem;
 }
 
 .footer__link {
