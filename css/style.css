@@ -379,6 +379,8 @@ body {
   color: var(--FONT-COLOR-CLOCK-DIGITAL-TIME);
   font-size: 2.25rem;
   font-weight: 400;
+  display: block;
+  margin-block-end: 0.1em;
 }
 
 .clock__am-pm {
