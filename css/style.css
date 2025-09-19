@@ -70,6 +70,7 @@ ol {
   --FONT-COLOR-HEADER-TITLE: #000;
   --FONT-COLOR-HEADER-SUBTITLE: #000;
   --FONT-COLOR-CLOCK-TIME: #000;
+  --FONT-COLOR-CLOCK-DIGITAL-TIME: #000;
   --FONT-COLOR-FOOTER-TAGLINE: #000;
   --BORDER-COLOR-CLOCK-KNOB: #000;
   --SHADOW-COLOR-CLOCK-ASSETS-1: rgba(0, 0, 0, 0.25);
@@ -370,6 +371,12 @@ body {
 .clock__text {
   text-align: center;
   margin-inline: auto;
+}
+
+.clock__digital-time {
+  color: var(--FONT-COLOR-CLOCK-DIGITAL-TIME);
+  font-size: 2.25rem;
+  font-weight: 700;
 }
 
 /** || FOOTER */
