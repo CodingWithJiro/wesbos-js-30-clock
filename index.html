@@ -93,7 +93,16 @@
 
         <form id="country-form" role="search">
           <label for="country-search">Country: </label>
-          <input type="search" id="country-search" name="country" />
+
+          <input
+            list="country-list"
+            type="search"
+            id="country-search"
+            name="country"
+          />
+
+          <datalist id="country-list"></datalist>
+
           <button type="submit">Search</button>
         </form>
 
