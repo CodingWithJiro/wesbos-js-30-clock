@@ -12,6 +12,22 @@ async function loadZones() {
   }
 }
 
+function loadSearchOptions() {
+  const countryList = document.getElementById("country-list");
+  let optionsHTMLText = "";
+
+  for (const zone of cachedZones) {
+    const country = zone.countryName;
+    const capitalArray = zone.zoneName.split("/");
+    const capital = capitalArray.at(-1).replaceAll("_", " ");
+
+    optionsHTMLText += `<option value="${capital}, ${country}" />`;
+  }
+
+  countryList.innerHTML = optionsHTMLText;
+}
+
 export async function initSearch() {
   await loadZones();
+  loadSearchOptions();
 }
