@@ -91,10 +91,11 @@
           Go directly to the main content of the page.
         </a>
 
-        <form id="country-form" role="search">
-          <label for="country-search">Country: </label>
+        <form class="search" id="country-form" role="search">
+          <label class="search__label" for="country-search">Country: </label>
 
           <input
+            class="search__input"
             list="country-list"
             type="search"
             id="country-search"
@@ -103,7 +104,7 @@
 
           <datalist id="country-list"></datalist>
 
-          <button type="submit">Search</button>
+          <button class="search__button" type="submit">Search</button>
         </form>
 
         <div class="theme">
