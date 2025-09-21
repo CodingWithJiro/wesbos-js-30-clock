@@ -11,3 +11,7 @@ async function loadZones() {
     cachedZones.push({ countryName: countryName, zoneName: zoneName });
   }
 }
+
+export function initSearch() {
+  loadZones();
+}
