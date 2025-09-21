@@ -12,6 +12,6 @@ async function loadZones() {
   }
 }
 
-export function initSearch() {
-  loadZones();
+export async function initSearch() {
+  await loadZones();
 }
