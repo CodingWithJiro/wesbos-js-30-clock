@@ -203,6 +203,7 @@ body {
 
 .header__container {
   padding-block-start: clamp(1.25rem, 6.3204rem + -5.6338vw, 5rem);
+  position: relative;
 }
 
 .header__title {
