@@ -124,6 +124,8 @@ ol {
 
 .container {
   padding-inline: 1.5rem;
+  max-width: 75rem;
+  margin-inline: auto;
 }
 
 /** || GENERAL STYLES */
