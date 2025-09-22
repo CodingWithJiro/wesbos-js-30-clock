@@ -206,6 +206,12 @@ body {
   position: relative;
 }
 
+.search {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+}
+
 .header__title {
   font-family: var(--FF);
   font-weight: 700;
