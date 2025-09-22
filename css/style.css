@@ -75,6 +75,7 @@ ol {
   --FONT-COLOR-CLOCK-LOCATION: #0000007a;
   --FONT-COLOR-CLOCK-DATE: #000;
   --FONT-COLOR-FOOTER-TAGLINE: #000;
+  --COLOR-SEARCH-ICON: #000;
   --BORDER-COLOR-SEARCH-INPUT: #0000007a;
   --BORDER-COLOR-CLOCK-KNOB: #000;
   --SHADOW-COLOR-CLOCK-ASSETS-1: rgba(0, 0, 0, 0.25);
@@ -230,6 +231,10 @@ body {
 
 .search__button {
   padding: 0.25em;
+}
+
+.search__icon {
+  color: var(--COLOR-SEARCH-ICON);
 }
 
 .header__title {
