@@ -68,6 +68,7 @@ ol {
   --BGCOLOR-CLOCK-SECOND: hsla(0, 0%, 53%, 0.7);
   --BGCOLOR-CLOCK-KNOB: #fc3e55d6;
   --FONT-COLOR-SEARCH-INPUT: #000;
+  --FONT-COLOR-SEARCH-INPUT-PLACEHOLDER: #777;
   --FONT-COLOR-HEADER-TITLE: #000;
   --FONT-COLOR-HEADER-SUBTITLE: #000;
   --FONT-COLOR-CLOCK-TIME: #000;
@@ -227,6 +228,10 @@ body {
   width: clamp(9rem, -8.4545rem + 87.2727vw, 12rem);
   color: var(--FONT-COLOR-SEARCH-INPUT);
   font-size: 0.875rem;
+}
+
+.search__input::placeholder {
+  color: var(--FONT-COLOR-SEARCH-INPUT-PLACEHOLDER);
 }
 
 .search__button {
