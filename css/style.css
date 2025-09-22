@@ -224,9 +224,9 @@ body {
   border: var(--BORDER-SEARCH-INPUT);
   border-radius: 100px;
   padding: 0.5em 1em;
-  width: 100%;
-  max-width: 10rem;
+  width: clamp(9rem, -8.4545rem + 87.2727vw, 12rem);
   color: var(--FONT-COLOR-SEARCH-INPUT);
+  font-size: 0.875rem;
 }
 
 .search__button {
