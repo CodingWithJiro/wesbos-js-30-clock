@@ -236,6 +236,12 @@ body {
 
 .search__button {
   padding: 0.25em;
+  cursor: pointer;
+}
+
+.search__button:hover,
+.search__button:focus-visible {
+  transform: scale(1.12);
 }
 
 .search__icon {
@@ -475,6 +481,10 @@ body {
 @media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;
+  }
+
+  .search__button {
+    transition: transform 0.15s ease-in-out;
   }
 
   /* ADD OTHER TRANSITIONS AND ANIMATIONS HERE */
