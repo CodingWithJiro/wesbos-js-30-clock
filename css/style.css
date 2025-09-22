@@ -67,6 +67,8 @@ ol {
   --BGCOLOR-CLOCK-MINUTE: #fc3e55d6;
   --BGCOLOR-CLOCK-SECOND: hsla(0, 0%, 53%, 0.7);
   --BGCOLOR-CLOCK-KNOB: #fc3e55d6;
+  --FONT-COLOR-SEARCH-INPUT: #000;
+  --FONT-COLOR-SEARCH-INPUT-PLACEHOLDER: #777;
   --FONT-COLOR-HEADER-TITLE: #000;
   --FONT-COLOR-HEADER-SUBTITLE: #000;
   --FONT-COLOR-CLOCK-TIME: #000;
@@ -74,6 +76,8 @@ ol {
   --FONT-COLOR-CLOCK-LOCATION: #0000007a;
   --FONT-COLOR-CLOCK-DATE: #000;
   --FONT-COLOR-FOOTER-TAGLINE: #000;
+  --COLOR-SEARCH-ICON: #000;
+  --BORDER-COLOR-SEARCH-INPUT: #0000007a;
   --BORDER-COLOR-CLOCK-KNOB: #000;
   --SHADOW-COLOR-CLOCK-ASSETS-1: rgba(0, 0, 0, 0.25);
   --SHADOW-COLOR-CLOCK-ASSETS-2: #fff;
@@ -87,6 +91,7 @@ ol {
 
   /* BORDERS */
   --BORDER-THEME-BUTTON: 1px solid var(--BORDER-COLOR-THEME-BUTTON);
+  --BORDER-SEARCH-INPUT: 1px solid var(--BORDER-COLOR-SEARCH-INPUT);
   --BORDER-CLOCK-KNOB: 2.5px solid var(--BORDER-COLOR-CLOCK-KNOB);
 
   /* SHADOWS */
@@ -124,6 +129,8 @@ ol {
 
 .container {
   padding-inline: 1.5rem;
+  max-width: 75rem;
+  margin-inline: auto;
 }
 
 /** || GENERAL STYLES */
@@ -201,6 +208,44 @@ body {
 
 .header__container {
   padding-block-start: clamp(1.25rem, 6.3204rem + -5.6338vw, 5rem);
+  position: relative;
+}
+
+.search {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.search__input {
+  border: var(--BORDER-SEARCH-INPUT);
+  border-radius: 100px;
+  padding: 0.5em 1em;
+  width: clamp(9rem, -8.4545rem + 87.2727vw, 12rem);
+  color: var(--FONT-COLOR-SEARCH-INPUT);
+  font-size: 0.875rem;
+}
+
+.search__input::placeholder {
+  color: var(--FONT-COLOR-SEARCH-INPUT-PLACEHOLDER);
+}
+
+.search__button {
+  padding: 0.25em;
+  cursor: pointer;
+}
+
+.search__button:hover,
+.search__button:focus-visible {
+  transform: scale(1.12);
+}
+
+.search__icon {
+  color: var(--COLOR-SEARCH-ICON);
 }
 
 .header__title {
@@ -436,6 +481,10 @@ body {
 @media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;
+  }
+
+  .search__button {
+    transition: transform 0.15s ease-in-out;
   }
 
   /* ADD OTHER TRANSITIONS AND ANIMATIONS HERE */
