@@ -228,6 +228,10 @@ body {
   color: var(--FONT-COLOR-SEARCH-INPUT);
 }
 
+.search__button {
+  padding: 0.25em;
+}
+
 .header__title {
   font-family: var(--FF);
   font-weight: 700;
