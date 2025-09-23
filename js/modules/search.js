@@ -7,6 +7,7 @@ const searchButton = document.querySelector(".search__button");
 const searchForm = document.querySelector(".search");
 
 const cachedZones = [];
+const capitalCountryArray = [];
 
 async function loadZones() {
   const { zones } = await getCountryData();
@@ -25,6 +26,7 @@ function loadSearchOptions() {
     const capitalArray = zone.zoneName.split("/");
     const capital = capitalArray.at(-1).replaceAll("_", " ");
 
+    capitalCountryArray.push(`${capital}, ${country}`);
     optionsHTMLText += `<option value="${capital}, ${country}" />`;
   }
 
