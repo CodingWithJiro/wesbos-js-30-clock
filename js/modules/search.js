@@ -31,7 +31,14 @@ function loadSearchOptions() {
   countryList.innerHTML = optionsHTMLText;
 }
 
+function initSearchForm() {
+  searchForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+  });
+}
+
 export async function initSearch() {
   await loadZones();
   loadSearchOptions();
+  initSearchForm();
 }
