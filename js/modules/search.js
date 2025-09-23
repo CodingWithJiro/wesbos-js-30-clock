@@ -31,6 +31,10 @@ function loadSearchOptions() {
   countryList.innerHTML = optionsHTMLText;
 }
 
+function getInputLocation() {
+  const input = searchInput.value.trim();
+}
+
 function initSearchForm() {
   searchForm.addEventListener("submit", (e) => {
     e.preventDefault();
