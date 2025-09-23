@@ -4,6 +4,8 @@ import { getCountryData } from "./api.js";
 // * SEARCH.JS SCRIPT
 const searchInput = document.querySelector(".search__input");
 const searchButton = document.querySelector(".search__button");
+const searchForm = document.querySelector(".search");
+
 const cachedZones = [];
 
 async function loadZones() {
