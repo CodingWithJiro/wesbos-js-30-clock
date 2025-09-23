@@ -54,10 +54,12 @@ async function handleSubmitSearchForm() {
   const { zones } = await getCountryData();
   const [capital, country] = getInputLocation();
   let currentTimestamp = 0;
+  let timeZone = "";
 
   for (const { countryName, zoneName, timestamp } of zones) {
     if (countryName === country && zoneName.includes(capital)) {
       currentTimestamp = timestamp;
+      timeZone = zoneName;
       break;
     }
   }
