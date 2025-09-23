@@ -33,6 +33,10 @@ function loadSearchOptions() {
   countryList.innerHTML = optionsHTMLText;
 }
 
+function isValidLocation(inputValue) {
+  return capitalCountryArray.includes(inputValue);
+}
+
 function getInputLocation() {
   const input = searchInput.value.trim();
 }
