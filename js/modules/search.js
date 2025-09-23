@@ -50,10 +50,25 @@ function getInputLocation() {
   }
 }
 
+async function handleSubmitSearchForm() {
+  const { zones } = await getCountryData();
+  const [capital, country] = getInputLocation();
+  let currentTimestamp = 0;
+
+  for (const { countryName, zoneName, timestamp } of zones) {
+    if (countryName === country && zoneName.includes(capital)) {
+      currentTimestamp = timestamp;
+      break;
+    }
+  }
+
+  return currentTimestamp;
+}
+
 function initSearchForm() {
   searchForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    const [capital, country] = getInputLocation();
+    handleSubmitSearchForm();
   });
 }
 
