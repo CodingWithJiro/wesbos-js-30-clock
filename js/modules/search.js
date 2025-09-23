@@ -39,11 +39,21 @@ function isValidLocation(inputValue) {
 
 function getInputLocation() {
   const input = searchInput.value.trim();
+
+  if (isValidLocation(input)) {
+    const inputArray = input.split(", ");
+    const [capital, country] = inputArray;
+
+    return [capital, country];
+  } else {
+    console.error("Please input a valid location");
+  }
 }
 
 function initSearchForm() {
   searchForm.addEventListener("submit", (e) => {
     e.preventDefault();
+    const [capital, country] = getInputLocation();
   });
 }
 
