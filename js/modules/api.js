@@ -23,3 +23,16 @@ export async function getCountryData() {
     return {};
   }
 }
+
+export async function getDate(inputTimeZone) {
+  try {
+    const response = await fetch(
+      `https://api.timezonedb.com/v2.1/get-time-zone?key=BERT7APVT6E5&format=json&by=zone&zone=${inputTimeZone}`
+    );
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Failed to fetch date:", error);
+    return {};
+  }
+}
