@@ -69,21 +69,19 @@ function getInputDate(inputTimestamp, inputTimeZone) {
 async function handleSubmitSearchForm() {
   const { zones } = await getCountryData();
   const [capital, country] = getInputLocation();
-  let currentTimestamp = 0;
   let timeZone = "";
 
-  for (const { countryName, zoneName, timestamp } of zones) {
+  for (const { countryName, zoneName } of zones) {
     if (
       countryName === country &&
       zoneName.includes(capital.replace(" ", "_"))
     ) {
-      currentTimestamp = timestamp;
       timeZone = zoneName;
       break;
     }
   }
 
-  return currentTimestamp;
+  return timeZone;
 }
 
 function initSearchForm() {
