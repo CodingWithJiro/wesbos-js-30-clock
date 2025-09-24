@@ -73,7 +73,10 @@ async function handleSubmitSearchForm() {
   let timeZone = "";
 
   for (const { countryName, zoneName, timestamp } of zones) {
-    if (countryName === country && zoneName.includes(capital)) {
+    if (
+      countryName === country &&
+      zoneName.includes(capital.replace(" ", "_"))
+    ) {
       currentTimestamp = timestamp;
       timeZone = zoneName;
       break;
