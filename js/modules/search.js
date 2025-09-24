@@ -1,5 +1,5 @@
 // * IMPORT MODULES
-import { getCountryData } from "./api.js";
+import { getCountryData, getDate } from "./api.js";
 
 // * SEARCH.JS SCRIPT
 const searchInput = document.querySelector(".search__input");
