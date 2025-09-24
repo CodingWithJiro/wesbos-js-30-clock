@@ -50,6 +50,22 @@ function getInputLocation() {
   }
 }
 
+function getInputDate(inputTimestamp, inputTimeZone) {
+  const dateObject = new Date(inputTimestamp * 1000);
+  const formatter = new Intl.DateTimeFormat("en-US", {
+    timeZone: inputTimeZone,
+    weekday: "long",
+    month: "long",
+    day: "numeric",
+    minute: "2-digit",
+    hour: "numeric",
+    hour12: true,
+  });
+  const inputDate = formatter.formatToParts(dateObject);
+
+  return inputDate;
+}
+
 async function handleSubmitSearchForm() {
   const { zones } = await getCountryData();
   const [capital, country] = getInputLocation();
