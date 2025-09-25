@@ -69,9 +69,13 @@ async function getInputTimeZone() {
   return timeZone;
 }
 
-async function handleSubmitSearchForm() {
+async function getZonedDate() {
   const timeZone = await getInputTimeZone();
+  const zonedDate = toZonedTime(new Date(), timeZone);
+  return zonedDate;
 }
+
+async function handleSubmitSearchForm() {}
 
 function initSearchForm() {
   searchForm.addEventListener("submit", (e) => {
