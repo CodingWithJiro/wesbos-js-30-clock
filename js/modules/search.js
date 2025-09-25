@@ -6,7 +6,6 @@ import { showUserLocation } from "./location.js";
 // * SEARCH.JS SCRIPT
 const searchInput = document.querySelector(".search__input");
 const searchForm = document.querySelector(".search");
-
 const cachedZones = [];
 const capitalCountryArray = [];
 
