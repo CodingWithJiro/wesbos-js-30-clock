@@ -1,6 +1,7 @@
 // * IMPORT MODULES
 import { getCountryData } from "./api.js";
 import { toZonedTime } from "https://esm.sh/date-fns-tz";
+import { initTick } from "./clock.js";
 
 // * SEARCH.JS SCRIPT
 const searchInput = document.querySelector(".search__input");
@@ -75,7 +76,9 @@ async function getZonedDate() {
   return zonedDate;
 }
 
-async function handleSubmitSearchForm() {}
+async function handleSubmitSearchForm() {
+  initTick(await getInputTimeZone());
+}
 
 function initSearchForm() {
   searchForm.addEventListener("submit", (e) => {
