@@ -50,7 +50,7 @@ function getInputLocation() {
   }
 }
 
-async function handleSubmitSearchForm() {
+async function getInputTimeZone() {
   const { zones } = await getCountryData();
   const [capital, country] = getInputLocation();
   let timeZone = "";
@@ -66,6 +66,10 @@ async function handleSubmitSearchForm() {
   }
 
   return timeZone;
+}
+
+async function handleSubmitSearchForm() {
+  const timeZone = await getInputTimeZone();
 }
 
 function initSearchForm() {
