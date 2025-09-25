@@ -1,6 +1,7 @@
 // * IMPORT MODULES
 import { getCountryData } from "./api.js";
 import { initTick } from "./clock.js";
+import { showUserLocation } from "./location.js";
 
 // * SEARCH.JS SCRIPT
 const searchInput = document.querySelector(".search__input");
@@ -70,6 +71,7 @@ async function getInputTimeZone() {
 
 async function handleSubmitSearchForm() {
   initTick(await getInputTimeZone());
+  showUserLocation(getInputLocation());
 }
 
 function initSearchForm() {
