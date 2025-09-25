@@ -70,12 +70,6 @@ async function getInputTimeZone() {
   return timeZone;
 }
 
-async function getZonedDate() {
-  const timeZone = await getInputTimeZone();
-  const zonedDate = toZonedTime(new Date(), timeZone);
-  return zonedDate;
-}
-
 async function handleSubmitSearchForm() {
   initTick(await getInputTimeZone());
 }
