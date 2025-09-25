@@ -1,5 +1,6 @@
 // * IMPORT MODULES
 import { getCountryData, getDate } from "./api.js";
+import { toZonedTime } from "https://esm.sh/date-fns-tz";
 
 // * SEARCH.JS SCRIPT
 const searchInput = document.querySelector(".search__input");
