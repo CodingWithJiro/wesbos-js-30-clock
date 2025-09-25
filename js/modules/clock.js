@@ -1,4 +1,7 @@
-//* CLOCK.JS SCRIPT
+// * IMPORT MODULES
+import { toZonedTime } from "https://esm.sh/date-fns-tz";
+
+// * CLOCK.JS SCRIPT
 const hour = document.querySelector(".clock__hour");
 const minute = document.querySelector(".clock__minute");
 const second = document.querySelector(".clock__second");
@@ -27,6 +30,8 @@ const days = [
   "Friday",
   "Saturday",
 ];
+let timer = null;
+let inputTimeZone = null;
 
 function displayInitialTime() {
   const now = new Date();
@@ -89,9 +94,19 @@ function initDate(dateObject) {
   } ${dateObject.getDate()}, ${days[dateObject.getDay()]}`;
 }
 
-function initTick() {
-  setInterval(() => {
-    const now = new Date();
+export function initTick(timeZone = null) {
+  if (timer) {
+    clearInterval(timer);
+  }
+
+  inputTimeZone = timeZone;
+
+  timer = setInterval(() => {
+    let now = new Date();
+
+    if (inputTimeZone) {
+      now = toZonedTime(new Date(), timeZone);
+    }
 
     rotateSecondsHand(now);
     rotateMinutesHand(now);

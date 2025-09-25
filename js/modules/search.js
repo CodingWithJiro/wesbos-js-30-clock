@@ -1,12 +1,11 @@
 // * IMPORT MODULES
 import { getCountryData } from "./api.js";
-import { toZonedTime } from "https://esm.sh/date-fns-tz";
+import { initTick } from "./clock.js";
+import { showUserLocation } from "./location.js";
 
 // * SEARCH.JS SCRIPT
 const searchInput = document.querySelector(".search__input");
-const searchButton = document.querySelector(".search__button");
 const searchForm = document.querySelector(".search");
-
 const cachedZones = [];
 const capitalCountryArray = [];
 
@@ -69,13 +68,10 @@ async function getInputTimeZone() {
   return timeZone;
 }
 
-async function getZonedDate() {
-  const timeZone = await getInputTimeZone();
-  const zonedDate = toZonedTime(new Date(), timeZone);
-  return zonedDate;
+async function handleSubmitSearchForm() {
+  initTick(await getInputTimeZone());
+  showUserLocation(getInputLocation());
 }
-
-async function handleSubmitSearchForm() {}
 
 function initSearchForm() {
   searchForm.addEventListener("submit", (e) => {

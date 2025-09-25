@@ -1,5 +1,4 @@
 // * API.JS SCRIPT
-
 export async function getUserData() {
   try {
     const response = await fetch("https://ipapi.co/json/");
