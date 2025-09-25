@@ -1,6 +1,5 @@
 // * IMPORT MODULES
 import { getCountryData } from "./api.js";
-import { toZonedTime } from "https://esm.sh/date-fns-tz";
 import { initTick } from "./clock.js";
 
 // * SEARCH.JS SCRIPT
