@@ -2,6 +2,7 @@
 const timeElement = document.querySelector(".clock__digital-time");
 const dateElement = document.querySelector(".clock__date");
 const locationElement = document.querySelector(".clock__location");
+const announcement = document.querySelector(".clock__announcement");
 
 export function updateTimeAndDateAttributes(dateObject) {
   const hours = String(dateObject.getHours()).padStart(2, "0");
@@ -29,4 +30,8 @@ export function addFadeOutFadeInValues() {
   locationElement.classList.add("fade-out-fade-in");
 
   resetElementAnimation(timeElement, dateElement, locationElement);
+}
+
+export function updateClockAnnouncementText() {
+  announcement.textContent = `Time zone switched to ${locationElement.textContent.trim()}. Current time is ${timeElement.textContent.trim()}`;
 }
