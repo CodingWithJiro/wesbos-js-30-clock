@@ -1,5 +1,6 @@
 // * IMPORT MODULES
 import { toZonedTime } from "https://esm.sh/date-fns-tz";
+import { updateTimeAndDateAttributes } from "./ui.js";
 
 // * CLOCK.JS SCRIPT
 const hour = document.querySelector(".clock__hour");
@@ -141,6 +142,7 @@ export function initTick(timeZone = null) {
     rotateHoursHand(now);
     initDigitalClock(now);
     initDate(now);
+    updateTimeAndDateAttributes(now);
   }, 1000);
 }
 
