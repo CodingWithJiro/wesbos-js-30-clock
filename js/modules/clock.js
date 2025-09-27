@@ -1,6 +1,6 @@
 // * IMPORT MODULES
 import { toZonedTime } from "https://esm.sh/date-fns-tz";
-import { updateTimeAndDateAttributes } from "./ui.js";
+import { addFadeOutFadeInValues, updateTimeAndDateAttributes } from "./ui.js";
 
 // * CLOCK.JS SCRIPT
 const hour = document.querySelector(".clock__hour");
@@ -123,6 +123,8 @@ export function initTick(timeZone = null) {
   if (timer) {
     clearInterval(timer);
   }
+
+  addFadeOutFadeInValues();
 
   inputTimeZone = timeZone;
 

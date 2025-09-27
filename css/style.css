@@ -487,6 +487,25 @@ body {
     transition: transform 0.15s ease-in-out;
   }
 
+  .fade-out-fade-in {
+    animation: fadeOutFadeIn 1.5s ease-in-out;
+  }
+
+  @keyframes fadeOutFadeIn {
+    0% {
+      opacity: 1;
+    }
+    10% {
+      opacity: 0;
+    }
+    75% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
   /* ADD OTHER TRANSITIONS AND ANIMATIONS HERE */
 
   .theme {

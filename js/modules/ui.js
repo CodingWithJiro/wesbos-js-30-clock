@@ -1,6 +1,7 @@
 // * UI.JS SCRIPT
 const timeElement = document.querySelector(".clock__digital-time");
 const dateElement = document.querySelector(".clock__date");
+const locationElement = document.querySelector(".clock__location");
 
 export function updateTimeAndDateAttributes(dateObject) {
   const hours = String(dateObject.getHours()).padStart(2, "0");
@@ -11,4 +12,10 @@ export function updateTimeAndDateAttributes(dateObject) {
 
   timeElement.setAttribute("datetime", `${hours}:${minutes}`);
   dateElement.setAttribute("datetime", `${year}-${month}-${date}`);
+}
+
+export function addFadeOutFadeInValues() {
+  timeElement.classList.add("fade-out-fade-in");
+  dateElement.classList.add("fade-out-fade-in");
+  locationElement.classList.add("fade-out-fade-in");
 }
