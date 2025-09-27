@@ -9,9 +9,9 @@ export async function showUserLocation(inputLocation = null) {
     const userData = await getUserData();
 
     location.innerHTML = `${userData.country_capital}, ${userData.country_name}`;
+  } else {
+    location.innerHTML = `${inputLocation[0]}, ${inputLocation[1]}`;
   }
-
-  location.innerHTML = `${inputLocation[0]}, ${inputLocation[1]}`;
 }
 
 export function initLocation() {

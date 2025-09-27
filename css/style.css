@@ -298,6 +298,7 @@ body {
   position: absolute;
   transform: translate(-50%, -50%);
   font-size: clamp(1.3125rem, 0.21875rem + 5.46875vw, 1.75rem);
+  user-select: none;
 }
 
 .clock__time--12 {
@@ -485,6 +486,25 @@ body {
 
   .search__button {
     transition: transform 0.15s ease-in-out;
+  }
+
+  .fade-out-fade-in {
+    animation: fadeOutFadeIn 1.5s ease-in-out;
+  }
+
+  @keyframes fadeOutFadeIn {
+    0% {
+      opacity: 1;
+    }
+    10% {
+      opacity: 0;
+    }
+    75% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 
   /* ADD OTHER TRANSITIONS AND ANIMATIONS HERE */

@@ -43,7 +43,7 @@
       name="twitter:description"
       content="TickTock lets you view the current
     time across countries! A #JavaScript30-inspired project built with #HTML,
-    #CSS, & #JavaScript. #WevDev"
+    #CSS, & #JavaScript. #WebDev"
     />
     <meta
       name="twitter:image"
@@ -102,6 +102,7 @@
             type="search"
             id="country-search"
             name="country"
+            aria-label="Type a country or capital"
             placeholder="Search Location"
           />
 
@@ -196,7 +197,7 @@
         <section class="clock">
           <h2 class="clock__title sr-only">Analog Clock Widget</h2>
 
-          <div class="clock__assets">
+          <div class="clock__assets" aria-hidden="true">
             <span class="clock__time clock__time--12">12</span>
             <div class="clock__marker clock__marker--1"></div>
             <div class="clock__marker clock__marker--2"></div>
@@ -226,6 +227,8 @@
               >January 1 Thursday</time
             >
           </div>
+
+          <p class="clock__announcement sr-only" aria-live="polite"></p>
         </section>
       </div>
     </main>

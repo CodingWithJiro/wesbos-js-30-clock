@@ -1,5 +1,10 @@
 // * IMPORT MODULES
 import { toZonedTime } from "https://esm.sh/date-fns-tz";
+import {
+  addFadeOutFadeInValues,
+  updateClockAnnouncementText,
+  updateTimeAndDateAttributes,
+} from "./ui.js";
 
 // * CLOCK.JS SCRIPT
 const hour = document.querySelector(".clock__hour");
@@ -32,6 +37,7 @@ const days = [
 ];
 let timer = null;
 let inputTimeZone = null;
+let isClicked = false;
 
 function displayInitialTime() {
   const now = new Date();
@@ -49,28 +55,51 @@ function setRotation(clockHand, degrees, transition) {
   clockHand.style.transform = `translate(-50%, -100%) rotate(${degrees}deg)`;
 }
 
+function setIsClickedToFalse() {
+  setTimeout(() => {
+    isClicked = false;
+  }, 1000);
+}
+
 function rotateSecondsHand(dateObject) {
   const secondDegrees = dateObject.getSeconds() * 6;
-  setRotation(
-    second,
-    secondDegrees,
-    "transform 0.05s cubic-bezier(0.1, 2.7, 0.58, 1)"
-  );
+  if (isClicked) {
+    setRotation(second, secondDegrees, "transform 1s ease");
+    setIsClickedToFalse();
+  } else {
+    setRotation(
+      second,
+      secondDegrees,
+      "transform 0.05s cubic-bezier(0.1, 2.7, 0.58, 1)"
+    );
+  }
 }
 
 function rotateMinutesHand(dateObject) {
   const minuteDegrees = dateObject.getMinutes() * 6;
-  setRotation(
-    minute,
-    minuteDegrees,
-    "transform 0.05s cubic-bezier(0.1, 2.7, 0.58, 1)"
-  );
+
+  if (isClicked) {
+    setRotation(minute, minuteDegrees, "transform 1s ease");
+    setIsClickedToFalse();
+  } else {
+    setRotation(
+      minute,
+      minuteDegrees,
+      "transform 0.05s cubic-bezier(0.1, 2.7, 0.58, 1)"
+    );
+  }
 }
 
 function rotateHoursHand(dateObject) {
   const hourDegrees =
     dateObject.getHours() * 30 + dateObject.getMinutes() * 0.5;
-  setRotation(hour, hourDegrees, "transform 0.05s linear");
+
+  if (isClicked) {
+    setRotation(hour, hourDegrees, "transform 1s ease");
+    setIsClickedToFalse();
+  } else {
+    setRotation(hour, hourDegrees, "transform 0.05s linear");
+  }
 }
 
 function initDigitalClock(dateObject) {
@@ -99,7 +128,13 @@ export function initTick(timeZone = null) {
     clearInterval(timer);
   }
 
+  addFadeOutFadeInValues();
+
   inputTimeZone = timeZone;
+
+  if (inputTimeZone) {
+    isClicked = true;
+  }
 
   timer = setInterval(() => {
     let now = new Date();
@@ -113,7 +148,12 @@ export function initTick(timeZone = null) {
     rotateHoursHand(now);
     initDigitalClock(now);
     initDate(now);
+    updateTimeAndDateAttributes(now);
   }, 1000);
+
+  setTimeout(() => {
+    updateClockAnnouncementText();
+  }, 2000);
 }
 
 export function initClock() {
