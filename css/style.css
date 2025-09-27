@@ -298,6 +298,7 @@ body {
   position: absolute;
   transform: translate(-50%, -50%);
   font-size: clamp(1.3125rem, 0.21875rem + 5.46875vw, 1.75rem);
+  user-select: none;
 }
 
 .clock__time--12 {
