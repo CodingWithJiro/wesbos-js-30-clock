@@ -14,8 +14,19 @@ export function updateTimeAndDateAttributes(dateObject) {
   dateElement.setAttribute("datetime", `${year}-${month}-${date}`);
 }
 
+function resetElementAnimation(...elements) {
+  elements.forEach((element) => {
+    element.addEventListener("animationend", () => {
+      void element.offSetWidth;
+      element.classList.remove("fade-out-fade-in");
+    });
+  });
+}
+
 export function addFadeOutFadeInValues() {
   timeElement.classList.add("fade-out-fade-in");
   dateElement.classList.add("fade-out-fade-in");
   locationElement.classList.add("fade-out-fade-in");
+
+  resetElementAnimation(timeElement, dateElement, locationElement);
 }
