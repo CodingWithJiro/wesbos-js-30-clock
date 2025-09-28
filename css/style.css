@@ -102,15 +102,34 @@ ol {
 
 /** || UTILITY CLASSES */
 .dark {
-  --BGCOLOR: #333;
-  /* ADD OTHER DARK COLOR THEME VARIABLES */
+  --BGCOLOR: #121212;
+  --BGCOLOR-CLOCK-ASSETS: #1a1a1a;
+  --BGCOLOR-CLOCK-MARKER: #f5f5f5;
+  --BGCOLOR-CLOCK-HOUR: #f5f5f5;
+  --BGCOLOR-CLOCK-MINUTE: #fc3e55;
+  --BGCOLOR-CLOCK-SECOND: hsla(0, 0%, 85%, 0.7);
+  --BGCOLOR-CLOCK-KNOB: #fc3e55;
+  --FONT-COLOR-SEARCH-INPUT: #f5f5f5;
+  --FONT-COLOR-SEARCH-INPUT-PLACEHOLDER: #bbb;
+  --FONT-COLOR-HEADER-TITLE: #f5f5f5;
+  --FONT-COLOR-HEADER-SUBTITLE: #ccc;
+  --FONT-COLOR-CLOCK-TIME: #f5f5f5;
+  --FONT-COLOR-CLOCK-DIGITAL-TIME: #f5f5f5;
+  --FONT-COLOR-CLOCK-LOCATION: #bbbbbb;
+  --FONT-COLOR-CLOCK-DATE: #f5f5f5;
+  --FONT-COLOR-FOOTER-TAGLINE: #ccc;
+  --COLOR-SEARCH-ICON: #f5f5f5;
+  --BORDER-COLOR-SEARCH-INPUT: #666;
+  --BORDER-COLOR-CLOCK-KNOB: #f5f5f5;
+  --SHADOW-COLOR-CLOCK-ASSETS-1: #0a0a0a;
+  --SHADOW-COLOR-CLOCK-ASSETS-2: rgba(255, 255, 255, 0.1);
 
   /* THEME TOGGLE COLORS */
-  --FONT-COLOR-THEME-ICON-DARK: #f1f1f1;
+  --FONT-COLOR-THEME-ICON-DARK: #f5f5f5;
   --BGCOLOR-THEME-BUTTON: #222;
-  --BGCOLOR-THEME-BUTTON-AFTER: #f1f1f1;
+  --BGCOLOR-THEME-BUTTON-AFTER: #f5f5f5;
   --BORDER-COLOR-THEME-BUTTON: #666;
-  --SHADOW-COLOR-THEME: rgba(255, 255, 255, 0.3);
+  --SHADOW-COLOR-THEME: rgba(255, 255, 255, 0.2);
 }
 
 .sr-only {
@@ -484,8 +503,50 @@ body {
     scroll-behavior: smooth;
   }
 
+  body,
+  .clock__marker {
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .search__input {
+    transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  }
+
+  .search__input::placeholder,
+  .search__icon,
+  .header__title,
+  .header__subtitle,
+  .clock__time,
+  .clock__digital-time,
+  .clock__location,
+  .clock__date,
+  .footer__tagline {
+    transition: color 0.3s ease-in-out;
+  }
+
   .search__button {
     transition: transform 0.15s ease-in-out;
+  }
+
+  .theme {
+    transition: box-shadow 0.3s ease-in-out;
+  }
+
+  .theme__button,
+  .clock__knob {
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  }
+
+  .theme__button::after {
+    transition: transform 0.15s ease-in-out, background-color 0.3s ease-in-out;
+  }
+
+  .theme__icon {
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .clock__assets {
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   }
 
   .fade-out-fade-in {
@@ -505,24 +566,6 @@ body {
     100% {
       opacity: 1;
     }
-  }
-
-  /* ADD OTHER TRANSITIONS AND ANIMATIONS HERE */
-
-  .theme {
-    transition: box-shadow 0.3s ease-in-out;
-  }
-
-  .theme__button {
-    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
-  }
-
-  .theme__button::after {
-    transition: transform 0.15s ease-in-out, background-color 0.3s ease-in-out;
-  }
-
-  .theme__icon {
-    transition: opacity 0.3s ease-in-out;
   }
 }
 
