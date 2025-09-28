@@ -35,3 +35,7 @@ export function addFadeOutFadeInValues() {
 export function updateClockAnnouncementText() {
   announcement.textContent = `Time zone switched to ${locationElement.textContent.trim()}. Current date is ${dateElement.textContent.trim()} ${timeElement.textContent.trim()}`;
 }
+
+export function initSurpriseSong() {
+  const surpriseButton = document.querySelector(".header__button");
+}
