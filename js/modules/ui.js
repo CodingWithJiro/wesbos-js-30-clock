@@ -3,6 +3,7 @@ const timeElement = document.querySelector(".clock__digital-time");
 const dateElement = document.querySelector(".clock__date");
 const locationElement = document.querySelector(".clock__location");
 const announcement = document.querySelector(".clock__announcement");
+const audio = document.querySelector(".header__audio");
 
 export function updateTimeAndDateAttributes(dateObject) {
   const hours = String(dateObject.getHours()).padStart(2, "0");
@@ -37,7 +38,11 @@ export function updateClockAnnouncementText() {
 }
 
 function handleClickSurpriseButton() {
-  console.log("Initial test function");
+  if (audio.paused) {
+    audio.play();
+  } else {
+    audio.pause();
+  }
 }
 
 export function initSurpriseSong() {
