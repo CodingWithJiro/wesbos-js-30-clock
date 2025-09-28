@@ -294,6 +294,10 @@ body {
   color: var(--FONT-COLOR-HEADER-SUBTITLE);
 }
 
+.header__button {
+  cursor: pointer;
+}
+
 .header__button:hover,
 .header__button:focus-visible {
   color: var(--FONT-COLOR-HEADER-BUTTON-HOVER);
