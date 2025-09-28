@@ -500,13 +500,6 @@ body {
   text-decoration: underline;
 }
 
-/** || MEDIA QUERY (DEVICE WIDTH) */
-@media screen and (min-width: 23.4375rem) {
-}
-
-@media screen and (min-width: 48rem) {
-}
-
 /** || MEDIA QUERY (REDUCED MOTION) */
 /* CHANGE THE DATA BELOW AS NEEDED */
 @media (prefers-reduced-motion: no-preference) {
