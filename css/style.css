@@ -98,6 +98,17 @@ ol {
   --BOX-SHADOW-THEME: 0 0 3px var(--SHADOW-COLOR-THEME);
   --BOX-SHADOW-CLOCK-ASSETS: 10px 10px 20px var(--SHADOW-COLOR-CLOCK-ASSETS-1),
     -10px -10px 20px var(--SHADOW-COLOR-CLOCK-ASSETS-2);
+
+  /* TRANSITIONS */
+  --TRANSITION-BACKGROUND-COLOR: background-color 0.3s ease-in-out;
+  --TRANSITION-COLOR: color 0.3s ease-in-out;
+  --TRANSITION-BORDER-COLOR: border-color 0.3s ease-in-out;
+  --TRANSITION-TRANSFORM: transform 0.15s ease-in-out;
+  --TRANSITION-BOX-SHADOW: box-shadow 0.3s ease-in-out;
+  --TRANSITION-OPACITY: opacity 0.3s ease-in-out;
+
+  /* ANIMATIONS */
+  --ANIMATION-FADE-OUT-FADE-IN: fadeOutFadeIn 1.5s ease-in-out;
 }
 
 /** || UTILITY CLASSES */
@@ -505,11 +516,11 @@ body {
 
   body,
   .clock__marker {
-    transition: background-color 0.3s ease-in-out;
+    transition: var(--TRANSITION-BACKGROUND-COLOR);
   }
 
   .search__input {
-    transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    transition: var(--TRANSITION-COLOR), var(--TRANSITION-BORDER-COLOR);
   }
 
   .search__input::placeholder,
@@ -521,36 +532,37 @@ body {
   .clock__location,
   .clock__date,
   .footer__tagline {
-    transition: color 0.3s ease-in-out;
+    transition: var(--TRANSITION-COLOR);
   }
 
   .search__button {
-    transition: transform 0.15s ease-in-out;
+    transition: var(--TRANSITION-TRANSFORM);
   }
 
   .theme {
-    transition: box-shadow 0.3s ease-in-out;
+    transition: var(--TRANSITION-BOX-SHADOW);
   }
 
   .theme__button,
   .clock__knob {
-    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    transition: var(--TRANSITION-BACKGROUND-COLOR),
+      var(--TRANSITION-BORDER-COLOR);
   }
 
   .theme__button::after {
-    transition: transform 0.15s ease-in-out, background-color 0.3s ease-in-out;
+    transition: var(--TRANSITION-TRANSFORM), var(--TRANSITION-BACKGROUND-COLOR);
   }
 
   .theme__icon {
-    transition: opacity 0.3s ease-in-out;
+    transition: var(--TRANSITION-OPACITY);
   }
 
   .clock__assets {
-    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: var(--TRANSITION-BACKGROUND-COLOR), var(--TRANSITION-BOX-SHADOW);
   }
 
   .fade-out-fade-in {
-    animation: fadeOutFadeIn 1.5s ease-in-out;
+    animation: var(--ANIMATION-FADE-OUT-FADE-IN);
   }
 
   @keyframes fadeOutFadeIn {
