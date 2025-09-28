@@ -70,7 +70,7 @@ function rotateSecondsHand(dateObject) {
     setRotation(
       second,
       secondDegrees,
-      "transform 0.05s cubic-bezier(0.1, 2.7, 0.58, 1)"
+      "transform 0.05s cubic-bezier(0.1, 2.7, 0.58, 1), background-color 0.3s ease-in-out"
     );
   }
 }
@@ -85,7 +85,7 @@ function rotateMinutesHand(dateObject) {
     setRotation(
       minute,
       minuteDegrees,
-      "transform 0.05s cubic-bezier(0.1, 2.7, 0.58, 1)"
+      "transform 0.05s cubic-bezier(0.1, 2.7, 0.58, 1), background-color 0.3s ease-in-out"
     );
   }
 }
@@ -98,7 +98,11 @@ function rotateHoursHand(dateObject) {
     setRotation(hour, hourDegrees, "transform 1s ease");
     setIsClickedToFalse();
   } else {
-    setRotation(hour, hourDegrees, "transform 0.05s linear");
+    setRotation(
+      hour,
+      hourDegrees,
+      "transform 0.05s linear, background-color 0.3s ease-in-out"
+    );
   }
 }
 
