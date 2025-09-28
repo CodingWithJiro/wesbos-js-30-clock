@@ -36,6 +36,12 @@ export function updateClockAnnouncementText() {
   announcement.textContent = `Time zone switched to ${locationElement.textContent.trim()}. Current date is ${dateElement.textContent.trim()} ${timeElement.textContent.trim()}`;
 }
 
+function handleClickSurpriseButton() {
+  console.log("Initial test function");
+}
+
 export function initSurpriseSong() {
   const surpriseButton = document.querySelector(".header__button");
+
+  surpriseButton.addEventListener("click", handleClickSurpriseButton);
 }
