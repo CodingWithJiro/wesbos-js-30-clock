@@ -503,8 +503,50 @@ body {
     scroll-behavior: smooth;
   }
 
+  body,
+  .clock__marker {
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .search__input {
+    transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  }
+
+  .search__input::placeholder,
+  .search__icon,
+  .header__title,
+  .header__subtitle,
+  .clock__time,
+  .clock__digital-time,
+  .clock__location,
+  .clock__date,
+  .footer__tagline {
+    transition: color 0.3s ease-in-out;
+  }
+
   .search__button {
     transition: transform 0.15s ease-in-out;
+  }
+
+  .theme {
+    transition: box-shadow 0.3s ease-in-out;
+  }
+
+  .theme__button,
+  .clock__knob {
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  }
+
+  .theme__button::after {
+    transition: transform 0.15s ease-in-out, background-color 0.3s ease-in-out;
+  }
+
+  .theme__icon {
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .clock__assets {
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   }
 
   .fade-out-fade-in {
@@ -524,24 +566,6 @@ body {
     100% {
       opacity: 1;
     }
-  }
-
-  /* ADD OTHER TRANSITIONS AND ANIMATIONS HERE */
-
-  .theme {
-    transition: box-shadow 0.3s ease-in-out;
-  }
-
-  .theme__button {
-    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
-  }
-
-  .theme__button::after {
-    transition: transform 0.15s ease-in-out, background-color 0.3s ease-in-out;
-  }
-
-  .theme__icon {
-    transition: opacity 0.3s ease-in-out;
   }
 }
 
