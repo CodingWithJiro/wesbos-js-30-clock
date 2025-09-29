@@ -299,6 +299,7 @@ body {
   height: 100%;
   border-radius: 50%;
   overflow: hidden;
+  display: none;
 }
 
 .clock__image {
