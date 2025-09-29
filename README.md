@@ -23,7 +23,7 @@
 ![Learning Path](https://img.shields.io/badge/learning%20path-month%206-blue)
 ![Views](https://visitor-badge.laobi.icu/badge?page_id=CodingWithJiro.wesbos-js-30-clock&left_text=repo%20views)
 
-## ℹ️ ADD PROJECT SUBTITLE
+## ℹ️ TickTock: Search A Location, Get Their Date and Time
 
 | _Mobile Preview (375x812)_                                   | _Desktop Preview (1440x960)_                                    |
 | ------------------------------------------------------------ | --------------------------------------------------------------- |
