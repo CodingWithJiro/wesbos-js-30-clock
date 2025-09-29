@@ -38,7 +38,9 @@ This project is inspired from Wes Bos' free [#JavaScript30 Course](https://javas
 
 ## 🔍 Overview
 
-WHAT THIS PROJECT CONTAINS WITH 1-2 PARAGRAPHS WITH 2-3 SENTENCES EACH.
+This project combines real-time APIs with JavaScript modules to deliver dynamic time data based on user input.
+
+It also implements a playful easter egg mode to surprise users especially Marvel fans.
 
 ---
 
