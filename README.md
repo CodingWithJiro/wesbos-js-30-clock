@@ -129,11 +129,3 @@ Created by **Elmar Chavez**
 🗓️ Month/Year: **September 2025**
 
 📚 Journey: **6<sup>th</sup>** month of learning _frontend web development_.
-
-<!--
-
-MERGE PULL REQUEST COMMENT SIMULATING PR APPROVAL FROM A TEAM:
-In a team setting, this PR would await senior developer approval.
-For this solo project, I’ll proceed with merging after review.
-
--->
