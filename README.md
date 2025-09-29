@@ -131,9 +131,6 @@ Created by **Elmar Chavez**
 
 <!--
 
-WES BOS JAVASCRIPT30 TAGS:
-html css javascript vscode git github netlify 6th-month wes-bos javascript30 project lighthouse theme-toggle figma
-
 MERGE PULL REQUEST COMMENT SIMULATING PR APPROVAL FROM A TEAM:
 In a team setting, this PR would await senior developer approval.
 For this solo project, I’ll proceed with merging after review.
