@@ -1,4 +1,4 @@
-# 💻 PROJECT TITLE
+# 💻 TickTock
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
@@ -14,23 +14,24 @@
 ![Responsive Layout](https://img.shields.io/badge/Responsive%20Layout-Full%20Support-blue?style=for-the-badge)
 ![Mobile First](https://img.shields.io/badge/Mobile--First-Design-orange?style=for-the-badge)
 ![Dark Mode](https://img.shields.io/badge/Dark--Mode-Available-111?style=for-the-badge&logo=halfbrickstudios&logoColor=white)
-![Light Mode](https://img.shields.io/badge/Light--Mode-Available-fff7ed?style=for-the-badge&logo=sun&logoColor=ff9800)
-[![Fetch API](https://img.shields.io/badge/API_NAME%20API-Used-1976d2?style=for-the-badge)](API_LINK)
+[![Fetch API](https://img.shields.io/badge/IP%20API-Used-1976d2?style=for-the-badge)](https://ipapi.co/)
+[![Fetch API](https://img.shields.io/badge/TimeZone%20DB%20API-Used-1976d2?style=for-the-badge)](https://timezonedb.com/)
 ![Dynamic Content](https://img.shields.io/badge/Dynamic%20Content-Available-673ab7?style=for-the-badge)
 [![Google Lighthouse](https://img.shields.io/badge/Lighthouse-Audit-00B0FF?style=for-the-badge&logo=lighthouse&logoColor=white)](./assets/downloads/lighthouse-performance-report.pdf)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3fb78393-bdf9-40f6-9ac3-1db235e5e404/deploy-status)](https://ticktock-jiro.netlify.app/)
 ![Status](https://img.shields.io/badge/status-complete-brightgreen)
 ![Learning Path](https://img.shields.io/badge/learning%20path-month%206-blue)
 ![Views](https://visitor-badge.laobi.icu/badge?page_id=CodingWithJiro.wesbos-js-30-clock&left_text=repo%20views)
 
-## ℹ️ ADD PROJECT SUBTITLE
+## ℹ️ TickTock: Search A Location, Get Their Date and Time
 
 | _Mobile Preview (375x812)_                                   | _Desktop Preview (1440x960)_                                    |
 | ------------------------------------------------------------ | --------------------------------------------------------------- |
 | ![Mobile](./assets/img/site-preview-mobile_375x812.png)      | ![Desktop](./assets/img/site-preview-desktop_1440x960.png)      |
 | ![Mobile](./assets/img/site-preview-mobile-dark_375x812.png) | ![Desktop](./assets/img/site-preview-desktop-dark_1440x960.png) |
 
-INSERT A BRIEF DESCRIPTION OF THE PROJECT
+TickTock is a responsive clock web app where users can search for any location and instantly see its current local date and time. It showcases live clock movement with an analog interface.
 
 This project is inspired from Wes Bos' free [#JavaScript30 Course](https://javascript30.com/)
 
@@ -38,25 +39,34 @@ This project is inspired from Wes Bos' free [#JavaScript30 Course](https://javas
 
 ## 🔍 Overview
 
-WHAT THIS PROJECT CONTAINS WITH 1-2 PARAGRAPHS WITH 2-3 SENTENCES EACH.
+This project combines real-time APIs with JavaScript modules to deliver dynamic time data based on user input.
+
+It also implements a playful easter egg mode to surprise users especially Marvel fans.
 
 ---
 
 ## ✨ Features
 
-INSERT LIST OF PROJECT FEATURES
+- Search any city and instantly fetch its local date and time
+- Animated analog clock hands synced to the local time
+- Fully responsive mobile-first layout
+- Semantic HTML + ARIA for better accessibility
+- Dynamic content updates
+- Hidden easter egg with surprise animation on secret button click
+- Fetches data from IP API and TimeZone DB API
+- Lighthouse evaluated for performance and accessibility
 
 ---
 
 ## 🔀 Development Workflow
 
-[![Network Graph](./assets/img/network-graph.png)](https://github.com/CodingWithJiro/REPO_NAME/network)
+[![Network Graph](./assets/img/network-graph.png)](https://github.com/CodingWithJiro/wesbos-js-30-clock/network)
 
 > Click to view the full branch and merge history
 
-This project adapts a [granular branching and commit workflow](https://github.com/CodingWithJiro/REPO_NAME/network) to simulate team collaboration. Each feature, fix, documentation, and chore is tracked in its own branch with descriptive commits.
+This project adapts a [granular branching and commit workflow](https://github.com/CodingWithJiro/wesbos-js-30-clock/network) to simulate team collaboration. Each feature, fix, documentation, and chore is tracked in its own branch with descriptive commits.
 
-Each [pull request](REPO_PULL_REQUEST_CLOSED_LINK) I created contains a clear description, change list, screenshots for UI updates, and reviewer notes.
+Each [pull request](https://github.com/CodingWithJiro/wesbos-js-30-clock/pulls?q=is%3Apr+is%3Aclosed) I created contains a clear description, change list, screenshots for UI updates, and reviewer notes.
 
 _This ensures I maintain a professional workflow, even as a solo developer._
 
@@ -64,7 +74,12 @@ _This ensures I maintain a professional workflow, even as a solo developer._
 
 ## 🧠 What I Learned
 
-INSERT LIST OF WHAT I LEARNED MAKING THIS PROJECT
+- Using `fetch` to integrate multiple third-party APIs
+- Importing a third-party function from [date-fns-tz CDN](https://esm.sh/date-fns-tz)
+- Adding ARIA roles for dynamic content and accessibility
+- Handling user input, events, and hidden features for engagement
+- Practicing a professional branching + PR workflow on GitHub
+- Gained hands on experienced with local dates as well as dates with timezone parameters
 
 ---
 
@@ -83,7 +98,6 @@ INSERT LIST OF WHAT I LEARNED MAKING THIS PROJECT
 
 - JPG design image
 - Figma
-- PerfectPixel
 
 ---
 
@@ -96,7 +110,7 @@ INSERT LIST OF WHAT I LEARNED MAKING THIS PROJECT
 
 ## 🌐 Live Demo
 
-Or you can check out the 👉 [live website here](LINK)
+Or you can check out the 👉 [live website here](https://ticktock-jiro.netlify.app/)
 
 ---
 
@@ -115,14 +129,3 @@ Created by **Elmar Chavez**
 🗓️ Month/Year: **September 2025**
 
 📚 Journey: **6<sup>th</sup>** month of learning _frontend web development_.
-
-<!--
-
-WES BOS JAVASCRIPT30 TAGS:
-html css javascript vscode git github netlify 6th-month wes-bos javascript30 project lighthouse theme-toggle figma
-
-MERGE PULL REQUEST COMMENT SIMULATING PR APPROVAL FROM A TEAM:
-In a team setting, this PR would await senior developer approval.
-For this solo project, I’ll proceed with merging after review.
-
--->
