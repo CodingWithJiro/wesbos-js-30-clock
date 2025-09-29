@@ -46,7 +46,14 @@ It also implements a playful easter egg mode to surprise users especially Marvel
 
 ## ✨ Features
 
-INSERT LIST OF PROJECT FEATURES
+- Search any city and instantly fetch its local date and time
+- Animated analog clock hands synced to the local time
+- Fully responsive mobile-first layout
+- Semantic HTML + ARIA for better accessibility
+- Dynamic content updates
+- Hidden easter egg with surprise animation on secret button click
+- Fetches data from IP API and TimeZone DB API
+- Lighthouse evaluated for performance and accessibility
 
 ---
 
