@@ -49,16 +49,15 @@
       name="twitter:image"
       content="https://ticktock-jiro.netlify.app/assets/img/site-preview-meta_1200x630.png"
     />
-    <!-- UPDATE COLOR & THEME -->
     <meta name="color-scheme" content="light dark" />
     <meta
       name="theme-color"
-      content="#ffffff"
+      content="#f0f5f8"
       media="(prefers-color-scheme: light)"
     />
     <meta
       name="theme-color"
-      content="#1a1a1a"
+      content="#121212"
       media="(prefers-color-scheme: dark)"
     />
     <meta name="robots" content="index, follow" />
@@ -188,7 +187,18 @@
 
         <h1 class="header__title">TickTock</h1>
 
-        <p class="header__subtitle">Lost time is never found again</p>
+        <p class="header__subtitle">
+          Lost <button class="header__button" type="button">time</button> is
+          never found again
+        </p>
+
+        <audio
+          class="header__audio"
+          src="./assets/media/audio/Jim Croce - Time In A Bottle.mp3"
+          preload="auto"
+          aria-hidden="true"
+          loop
+        ></audio>
       </div>
     </header>
 
@@ -214,6 +224,13 @@
             <div class="clock__minute"></div>
             <div class="clock__second"></div>
             <div class="clock__knob"></div>
+            <div class="clock__image-wrapper">
+              <img
+                class="clock__image"
+                src="./assets/img/quicksilver_480x200.gif"
+                alt="Quicksilver eating soup while running in super speed."
+              />
+            </div>
           </div>
 
           <div class="clock__text">
