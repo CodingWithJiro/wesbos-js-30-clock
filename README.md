@@ -59,13 +59,13 @@ It also implements a playful easter egg mode to surprise users especially Marvel
 
 ## 🔀 Development Workflow
 
-[![Network Graph](./assets/img/network-graph.png)](https://github.com/CodingWithJiro/REPO_NAME/network)
+[![Network Graph](./assets/img/network-graph.png)](https://github.com/CodingWithJiro/wesbos-js-30-clock/network)
 
 > Click to view the full branch and merge history
 
-This project adapts a [granular branching and commit workflow](https://github.com/CodingWithJiro/REPO_NAME/network) to simulate team collaboration. Each feature, fix, documentation, and chore is tracked in its own branch with descriptive commits.
+This project adapts a [granular branching and commit workflow](https://github.com/CodingWithJiro/wesbos-js-30-clock/network) to simulate team collaboration. Each feature, fix, documentation, and chore is tracked in its own branch with descriptive commits.
 
-Each [pull request](REPO_PULL_REQUEST_CLOSED_LINK) I created contains a clear description, change list, screenshots for UI updates, and reviewer notes.
+Each [pull request](https://github.com/CodingWithJiro/wesbos-js-30-clock/pulls?q=is%3Apr+is%3Aclosed) I created contains a clear description, change list, screenshots for UI updates, and reviewer notes.
 
 _This ensures I maintain a professional workflow, even as a solo developer._
 
