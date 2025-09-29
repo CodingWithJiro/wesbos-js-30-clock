@@ -14,7 +14,6 @@
 ![Responsive Layout](https://img.shields.io/badge/Responsive%20Layout-Full%20Support-blue?style=for-the-badge)
 ![Mobile First](https://img.shields.io/badge/Mobile--First-Design-orange?style=for-the-badge)
 ![Dark Mode](https://img.shields.io/badge/Dark--Mode-Available-111?style=for-the-badge&logo=halfbrickstudios&logoColor=white)
-![Light Mode](https://img.shields.io/badge/Light--Mode-Available-fff7ed?style=for-the-badge&logo=sun&logoColor=ff9800)
 [![Fetch API](https://img.shields.io/badge/API_NAME%20API-Used-1976d2?style=for-the-badge)](API_LINK)
 ![Dynamic Content](https://img.shields.io/badge/Dynamic%20Content-Available-673ab7?style=for-the-badge)
 [![Google Lighthouse](https://img.shields.io/badge/Lighthouse-Audit-00B0FF?style=for-the-badge&logo=lighthouse&logoColor=white)](./assets/downloads/lighthouse-performance-report.pdf)
