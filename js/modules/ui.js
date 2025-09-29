@@ -4,6 +4,7 @@ const dateElement = document.querySelector(".clock__date");
 const locationElement = document.querySelector(".clock__location");
 const announcement = document.querySelector(".clock__announcement");
 const audio = document.querySelector(".header__audio");
+const image = document.querySelector(".clock__image-wrapper");
 
 export function updateTimeAndDateAttributes(dateObject) {
   const hours = String(dateObject.getHours()).padStart(2, "0");
@@ -19,8 +20,10 @@ export function updateTimeAndDateAttributes(dateObject) {
 function resetElementAnimation(...elements) {
   elements.forEach((element) => {
     element.addEventListener("animationend", () => {
-      void element.offSetWidth;
+      void element.offsetWidth;
       element.classList.remove("fade-out-fade-in");
+      element.classList.remove("fade-in");
+      element.classList.remove("fade-out");
     });
   });
 }
@@ -40,13 +43,18 @@ export function updateClockAnnouncementText() {
 function handleClickSurpriseButton() {
   if (audio.paused) {
     audio.play();
+    image.classList.remove("fade-out");
+    void image.offsetWidth;
+    image.classList.add("fade-in");
   } else {
     audio.pause();
+    image.classList.remove("fade-in");
+    void image.offsetWidth;
+    image.classList.add("fade-out");
   }
 }
 
 export function initSurpriseSong() {
   const surpriseButton = document.querySelector(".header__button");
-
   surpriseButton.addEventListener("click", handleClickSurpriseButton);
 }
