@@ -97,7 +97,6 @@ _This ensures I maintain a professional workflow, even as a solo developer._
 
 - JPG design image
 - Figma
-- PerfectPixel
 
 ---
 
