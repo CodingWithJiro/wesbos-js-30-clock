@@ -73,7 +73,12 @@ _This ensures I maintain a professional workflow, even as a solo developer._
 
 ## 🧠 What I Learned
 
-INSERT LIST OF WHAT I LEARNED MAKING THIS PROJECT
+- Using `fetch` to integrate multiple third-party APIs
+- Importing a third-party function from [date-fns-tz CDN](https://esm.sh/date-fns-tz)
+- Adding ARIA roles for dynamic content and accessibility
+- Handling user input, events, and hidden features for engagement
+- Practicing a professional branching + PR workflow on GitHub
+- Gained hands on experienced with local dates as well as dates with timezone parameters
 
 ---
 
