@@ -30,7 +30,7 @@
 | ![Mobile](./assets/img/site-preview-mobile_375x812.png)      | ![Desktop](./assets/img/site-preview-desktop_1440x960.png)      |
 | ![Mobile](./assets/img/site-preview-mobile-dark_375x812.png) | ![Desktop](./assets/img/site-preview-desktop-dark_1440x960.png) |
 
-INSERT A BRIEF DESCRIPTION OF THE PROJECT
+TickTock is a responsive clock web app where users can search for any location and instantly see its current local date and time. It showcases live clock movement with an analog interface.
 
 This project is inspired from Wes Bos' free [#JavaScript30 Course](https://javascript30.com/)
 
