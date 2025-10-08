@@ -33,7 +33,7 @@
 
 TickTock is a responsive clock web app where users can search for any location and instantly see its current local date and time. It showcases live clock movement with an analog interface.
 
-This project is inspired from Wes Bos' free [#JavaScript30 Course](https://javascript30.com/)
+This project is inspired from Wes Bos' free **[#JavaScript30 Course](https://javascript30.com/)**
 
 ---
 
@@ -64,9 +64,9 @@ It also implements a playful easter egg mode to surprise users especially Marvel
 
 > Click to view the full branch and merge history
 
-This project adapts a [granular branching and commit workflow](https://github.com/CodingWithJiro/wesbos-js-30-clock/network) to simulate team collaboration. Each feature, fix, documentation, and chore is tracked in its own branch with descriptive commits.
+This project adapts a **[granular branching and commit workflow](https://github.com/CodingWithJiro/wesbos-js-30-clock/network)** to simulate team collaboration. Each feature, fix, documentation, and chore is tracked in its own branch with descriptive commits.
 
-Each [pull request](https://github.com/CodingWithJiro/wesbos-js-30-clock/pulls?q=is%3Apr+is%3Aclosed) I created contains a clear description, change list, screenshots for UI updates, and reviewer notes.
+Each **[pull request](https://github.com/CodingWithJiro/wesbos-js-30-clock/pulls?q=is%3Apr+is%3Aclosed)** I created contains a clear description, change list, screenshots for UI updates, and reviewer notes.
 
 _This ensures I maintain a professional workflow, even as a solo developer._
 
@@ -75,7 +75,7 @@ _This ensures I maintain a professional workflow, even as a solo developer._
 ## What I Learned
 
 - Using `fetch` to integrate multiple third-party APIs
-- Importing a third-party function from [date-fns-tz CDN](https://esm.sh/date-fns-tz)
+- Importing a third-party function from **[date-fns-tz CDN](https://esm.sh/date-fns-tz)**
 - Adding ARIA roles for dynamic content and accessibility
 - Handling user input, events, and hidden features for engagement
 - Practicing a professional branching + PR workflow on GitHub
@@ -110,7 +110,7 @@ _This ensures I maintain a professional workflow, even as a solo developer._
 
 ## Live Demo
 
-Or you can check out the [live website here](https://ticktock-jiro.netlify.app/)
+Or you can check out the **[live website here](https://ticktock-jiro.netlify.app/)**
 
 ---
 
@@ -118,7 +118,7 @@ Or you can check out the [live website here](https://ticktock-jiro.netlify.app/)
 
 [![Lighthouse Report Preview](./assets/img/lighthouse-report.png)](./assets/downloads/lighthouse-performance-report.pdf)
 
-A **Google Lighthouse** audit was conducted on the final version of this project. You can view the full report [here](./assets/downloads/lighthouse-performance-report.pdf).
+A **Google Lighthouse** audit was conducted on the final version of this project. You can view the **[full report here](./assets/downloads/lighthouse-performance-report.pdf)**.
 
 ---
 
