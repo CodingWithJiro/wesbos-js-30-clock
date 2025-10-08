@@ -1,4 +1,4 @@
-# 💻 TickTock
+# TickTock
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
@@ -24,7 +24,7 @@
 ![Learning Path](https://img.shields.io/badge/learning%20path-month%206-blue)
 ![Views](https://visitor-badge.laobi.icu/badge?page_id=CodingWithJiro.wesbos-js-30-clock&left_text=repo%20views)
 
-## ℹ️ TickTock: Search A Location, Get Their Date and Time
+## TickTock: Search A Location, Get Their Date and Time
 
 | _Mobile Preview (375x812)_                                   | _Desktop Preview (1440x960)_                                    |
 | ------------------------------------------------------------ | --------------------------------------------------------------- |
@@ -33,11 +33,11 @@
 
 TickTock is a responsive clock web app where users can search for any location and instantly see its current local date and time. It showcases live clock movement with an analog interface.
 
-This project is inspired from Wes Bos' free [#JavaScript30 Course](https://javascript30.com/)
+This project is inspired from Wes Bos' free **[#JavaScript30 Course](https://javascript30.com/)**
 
 ---
 
-## 🔍 Overview
+## Overview
 
 This project combines real-time APIs with JavaScript modules to deliver dynamic time data based on user input.
 
@@ -45,7 +45,7 @@ It also implements a playful easter egg mode to surprise users especially Marvel
 
 ---
 
-## ✨ Features
+## Features
 
 - Search any city and instantly fetch its local date and time
 - Animated analog clock hands synced to the local time
@@ -58,24 +58,24 @@ It also implements a playful easter egg mode to surprise users especially Marvel
 
 ---
 
-## 🔀 Development Workflow
+## Development Workflow
 
 [![Network Graph](./assets/img/network-graph.png)](https://github.com/CodingWithJiro/wesbos-js-30-clock/network)
 
 > Click to view the full branch and merge history
 
-This project adapts a [granular branching and commit workflow](https://github.com/CodingWithJiro/wesbos-js-30-clock/network) to simulate team collaboration. Each feature, fix, documentation, and chore is tracked in its own branch with descriptive commits.
+This project adapts a **[granular branching and commit workflow](https://github.com/CodingWithJiro/wesbos-js-30-clock/network)** to simulate team collaboration. Each feature, fix, documentation, and chore is tracked in its own branch with descriptive commits.
 
-Each [pull request](https://github.com/CodingWithJiro/wesbos-js-30-clock/pulls?q=is%3Apr+is%3Aclosed) I created contains a clear description, change list, screenshots for UI updates, and reviewer notes.
+Each **[pull request](https://github.com/CodingWithJiro/wesbos-js-30-clock/pulls?q=is%3Apr+is%3Aclosed)** I created contains a clear description, change list, screenshots for UI updates, and reviewer notes.
 
 _This ensures I maintain a professional workflow, even as a solo developer._
 
 ---
 
-## 🧠 What I Learned
+## What I Learned
 
 - Using `fetch` to integrate multiple third-party APIs
-- Importing a third-party function from [date-fns-tz CDN](https://esm.sh/date-fns-tz)
+- Importing a third-party function from **[date-fns-tz CDN](https://esm.sh/date-fns-tz)**
 - Adding ARIA roles for dynamic content and accessibility
 - Handling user input, events, and hidden features for engagement
 - Practicing a professional branching + PR workflow on GitHub
@@ -83,7 +83,7 @@ _This ensures I maintain a professional workflow, even as a solo developer._
 
 ---
 
-## 🛠️ Tech Used
+## Tech Used
 
 - HTML5
 - CSS3
@@ -94,38 +94,38 @@ _This ensures I maintain a professional workflow, even as a solo developer._
 
 ---
 
-## 🎨 Design Reference & Tools
+## Design Reference & Tools
 
 - JPG design image
 - Figma
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 1. Clone the repository
 2. Open `index.html` in your browser
 
 ---
 
-## 🌐 Live Demo
+## Live Demo
 
-Or you can check out the 👉 [live website here](https://ticktock-jiro.netlify.app/)
+Or you can check out the **[live website here](https://ticktock-jiro.netlify.app/)**
 
 ---
 
-## 📊 Performance Report
+## Performance Report
 
 [![Lighthouse Report Preview](./assets/img/lighthouse-report.png)](./assets/downloads/lighthouse-performance-report.pdf)
 
-A **Google Lighthouse** audit was conducted on the final version of this project. You can view the full report [here](./assets/downloads/lighthouse-performance-report.pdf).
+A **Google Lighthouse** audit was conducted on the final version of this project. You can view the **[full report here](./assets/downloads/lighthouse-performance-report.pdf)**.
 
 ---
 
-## 🧑‍💻 Author
+## Author
 
 Created by **Elmar Chavez**
 
-🗓️ Month/Year: **September 2025**
+Month/Year: **September 2025**
 
-📚 Journey: **6<sup>th</sup>** month of learning _frontend web development_.
+Journey: **6<sup>th</sup>** month of learning _frontend web development_.
